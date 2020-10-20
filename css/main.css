@@ -1,106 +1,224 @@
-:root {
-    box-sizing: border-box;
-}
-
-* {
-    padding: 0;
+*,
+*:after,
+*:before {
     margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 
+
 ul {
     list-style-type: none;
-    width: 100%;
 }
 
 html {
     width: 100%;
-    min-height: 100px;
+    min-height: 100%;
     font-size: 62.5%;
 }
 
 body {
-    width: 100%;
-    min-height: 100px;
-    font-size: 1.6rem;
-    position: relative;
-    background-color: #eee;
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "DIN Pro Black";
 }
 
 .container {
     display: flex;
-    font-family: row nowrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 960px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 
-.nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    z-index: 100;
+h1 {
+    font-size: 5.3rem;
+    text-transform: lowercase;
 }
 
-.nav .container{
+h1::first-letter {
+    text-transform: uppercase;
+}
+
+.button {
+    font-family: "DIN Pro";
+    font-size: 17px;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    color: #000000;
+    transition: all 0.15;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.button-transparent {
+    background-color: transparent;
+}
+
+.button-transparent:hover {
+    background-color: #000;
+    color: #000;
+}
+
+.button-attention {
+    background-color: #EE1919;
+    border-color: #EE1919;
+    color: #ffffff;
+}
+
+.button-dark {
+    background-color: #000000;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "DIN Pro Black";
+}
+
+h2 {
+    font-size: 5.3rem;
+}
+
+p {
+    font-size: 2.4rem;
+}
+
+.button-attnetion:hover {
+
+}
+
+body {
+    width: 100%;
+    font-size: 1.6rem;
+    position: relative;
+    background-color: #eee;
+    font-family: 'DIN Pro';
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.header {
+    background: url('../img/bg-1.jpg') 50% 0;
+    background-size: cover;
+}
+
+.header h1 span{
+    font-size: 3.2rem;
+    font-family: "DIN Pro";
+}
+
+.header h1 span::first-letter {
+    text-transform: uppercase;
+}
+
+.nav {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    z-index: 100;
+    flex-flow: row;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    color: #ffffff;
+    max-width: 1120px;
+    margin: 0 auto;
+    font-size: 1.7rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav a {
+    /* font-size: 1.7rem; */
+    color: #ffffff;
+    font-size: 1.7rem;
+    display: block;
 }
 
 .nav__menu {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    list-style-type: none;
+    flex-grow: 2;
+    margin-left: 4.8rem;
+    padding-top: 1.6rem;
 }
 
-.nav__item a{
-    padding: .5rem 1.5rem 0.25rem;
-    text-decoration: none;
-    color: #ffffff;
-    display: block;
-    text-align: center;
-    font-size: 2rem;
-    line-height: 0.7;
+.nav__menu li {
+    display: inline-block;
 }
 
-.nav__item a:after {
+.fancy_underline:after {
     content: '';
     display: inline-block;
     width: 1%;
     height: 2px;
-    background-color: rgba(255,255,255,0);
+    /* background-color: rgba(255,255,255,0); */
+    background-color: inherit;
     border: none;
-    transition: width .25s .1s ease-in, color .25s .1s;
+    transition: all 0.25s .25s;
 }
 
-.nav__item a:hover:after {
+.fancy_underline:hover:after {
     width: 100%;
     background-color: rgba(255,255,255,1);
+
 }
 
-.nav__info {
+.nav__item a{
+    padding: .5rem 1.75rem 0.25rem;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    line-height: 0.7;
+    font-family: 'DIN Pro';
+}
+
+.nav__aside {
     display: flex;
     flex-flow: row nowrap;
+    text-align: right;
 }
 
-.nav__info {
+.nav__aside p:not(:last-child) {
+    padding-right: 2.8rem;
+}
+
+.nav__aside a {
+    /* white-space: nowrap; */
+    font-size: 1.9rem;
+    font-family: 'DIN Pro Medium';
+    line-height: 0.35;
+    margin-bottom: 0.7rem;
     text-align: center;
+}
+
+.nav__button {
+    padding: 5px 15px;
+    font-size: 1.3rem;
+    font-family: 'DIN Pro';
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.nav__button:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .jumbotron {
     padding-top: 200px;
     height: 90vh;
     width: 100vw;
-    background-image: url('../img/bg-1.jpg');
-    background-size: cover;
     position: relative;
-    z-index: -1;
 }
 
 
@@ -138,47 +256,67 @@ body {
     padding-bottom: 10rem;
 }
 
-.jumbotron__text--header,
-.jumbotron__text--content {
-    width: 50%;
+.jumbotron__text--header {
+    flex-grow: 1.1;
+    flex-basis: 52%;
 }
+
+.jumbotron__text--content {
+    flex-basis: 48%;
+}
+
 
 .jumbotron h1 {
-    font-weight: 900;
-    font-size: 4.5rem;
-    letter-spacing: 3px;
+    font-family: 'DIN Pro Black';
+    font-size: 5.3rem;
+    margin-bottom: 6rem;
 }
 
-.jumbotron h1 span {
-    font-size: 2.75rem;
-    letter-spacing: normal;
-    font-weight: 400;
+.jumbotron__text--header p {
+    font-size: 3.2rem;
+    font-family: "DIN Pro";
 }
 
 .jumbotron__text--content {
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 4rem 4rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    padding: 4rem 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.jumbotron__text--content h2 {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+.jumbotron__text--content p {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    flex-basis: 100%;
 }
 
-.jumbotron__text--content img{
-    max-width: 120px;
-    line-height: 4;
-    vertical-align: middle;
+.jumbotron__icon-container{
+    width: 177px;
+    height: 83px;
+    background: url(../img/bed-icon-small.png) center;
+    display: inline-block;
 }
 
 .jumbotron__input--container {
+    /* overflow: hidden;
+    display: inline-block;
+    position: relative;
+    text-align: center; */
+}
+
+.blink {
     overflow: hidden;
     display: inline-block;
     position: relative;
+    text-align: center;
+
 }
 
-.jumbotron__input--container:after {
+.blink:after {
     content: '';
     transform: rotate(45deg);
     display: block;
@@ -191,64 +329,637 @@ body {
     animation: slideLeft 2s 0s infinite
 }
 
-.jumbotron__text--content input {
+.jumbotron__input--container:after {
+    /* content: '';
+    transform: rotate(45deg);
     display: block;
-    font-size: 2rem;
+    position: absolute;
+    background-color: rgba(255,255,255, 0.5);
+    height: 200px;
+    width: 40px;
+    left: -40px;
+    top: -50px;
+    animation: slideLeft 2s 0s infinite */
+}
+
+.jumbotron__text--content input {
+    display: inline-block;
     background-color: #f10;
     border: none;
     color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 2rem 2.6rem;
     border-radius: 1rem;
-    line-height: 4;
-    vertical-align: middle;
+    font-size: 1.6rem;
+    font-family: "DIN Pro";
 }
 
-.about-us {
-    padding-top: 5rem;
-}
-
-.about-us__card-container {
+.card-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+    padding-top: 11rem;
 } 
 
-.about-us__card-container li:not(:last-child) {
-    margin-right: 4rem;
+.card-container .card:not(:last-child) {
+    margin-right: 6.5rem;
 }
 
-.about-us .card {
+.card {
     background-color: #ffffff;
     border-radius: 10px;
     max-width: 300px;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 5.5rem 3rem 4.5rem;
     min-height: 310px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex-flow: column;
+    flex-flow: column wrap;
+    font-size: 1.7rem;
 }
 
-.about-us .card > * {
+.card img {
+    display: block;
+    justify-self: start;
+    margin-bottom: auto;
+}
+
+.card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    font-family: "DIN Pro Black";
+}
+
+.gallery {
+    padding: 9.5rem 0 11.5rem;
+}
+
+.gallery__header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.gallery__header .button {
+    padding: .6rem 2.8rem;
+    font-size: 2rem;
+    font-family: "DIN Pro Black";
+    text-transform: capitalize;
+    border: transparent;
+}
+
+.gallery__header .button.active {
+    color: #ff1100;
+    border: 1px solid #A5A5A5;
+}
+
+.gallery__header h2 {
+    font-size: 5.2rem;
+    font-family: "DIN Pro Black";
+    margin-bottom: 2.6rem;
+    flex-basis: 100%;
+}
+
+.gallery__header > p {
+    font-size: 3.2rem;
+    font-family: "DIN Pro";
+    margin-bottom: 8.5rem;
+    margin-right: auto;
+}
+
+.gallery__type li {
+    display: inline-block;
+}
+
+.gallery__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 12rem;
+}
+
+.gallery__items {
+    flex-basis: 33%;
+    outline-width: 0 2px 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 40px 0 40px;
+    border: 1px solid #E1E1E1;
+    border-top: none;
+}
+
+.gallery__content > .gallery__items:nth-child(3n) {
+    border-right: none;
+    border-left: none;
+}
+
+.gallery__content > .gallery__items:nth-child(3n + 1) {
+    border-right: none;
+    border-left: none;
+}
+
+.gallery__content > .gallery__items:nth-child(-n + 3) {
+    border-top: none;
+}
+
+.gallery__content > .gallery__items:nth-last-child(-n + 3) {
+    border-bottom: none;
+}
+
+
+.item-type {
+    font-family: "DIN Pro Light";
+    font-size: 1.7rem;
+
+}
+
+.item-name {
+    font-size: "DIN Pro Black";
+    font-size: 2rem;
+}
+
+.price {
+    font-size: 'DIN Pro Medium';
+    font-size: 1.7rem;
+}
+
+.price:after {
+    content: 'рублей';
+    padding-left: 4px;
+}
+
+
+.gallery__item--img {
+    max-width: 300px;
+    height: auto;
+}
+
+.gallery__item--img img {
+    max-width: 300px;
+}
+
+.gallery__item--content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.gallery__item--thumbs a{
+    display: inline-block;
+}
+
+.gallery__item--thumbs img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.gallery__item--ordering {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 300px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.gallery__item--ordering input{
+    flex-basis: 48%;
+    padding: 1.4rem 0 1.4rem;
+}
+
+.gallery__footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__footer p {
+    font-size: 1.7rem;
+    flex-basis: 44rem;
+    font-family: "DIN Pro";
+}
+
+.gallery__footer input {
+    padding: 1.8rem 4rem;
+    color: #ffffff;
+
+}
+
+.looking-for {
+    padding: 9.2rem 0 10rem;
+    background: url(../img/bg-2.jpg);
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.looking-for h2{
+    text-transform: capitalize;
+    font-size: 4.3rem;
+    font-family: "DIN Pro Black";
+    max-width: 72rem;
+    margin-bottom: 3.5rem;
+    line-height: 0.8;
+}
+
+.looking-for p {
+    font-size: 2.4rem;
+    font-family: "DIN Pro Light";
+    display: inline-block;
+    max-width: 48rem;
+    vertical-align: top;
+    margin-right: 5.5rem;
+}
+
+.looking-for img {
+    display: inline-block;
+    width: 58rem;
+    height: 28rem;
+}
+
+.looking-for input {
+    padding: 2.2rem 4rem;
+}
+
+.your-choice .container{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 11.5rem 0 11.5rem;
+}
+
+.your-choice .card-container {
+    padding: 0;
+}
+
+.your-choice h2 {
+    flex-basis: 38.5rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.card-container p {
+    font-size: 1.7rem;
+    font-family: "DIN Pro";
+}
+
+.your-choice .card-container li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.matras {
+    background-image: url(../img/bg-3.jpg);
+    background-attachment: fixed;
+    padding: 10rem 0 9rem;
+    color: #ffffff;
+}
+
+.matras h2 {
+    font-size: 4.3rem;
+    margin-bottom: 5rem;
+}
+
+.matras p {
+    font-family: 'DIN Pro Light'
+}
+
+.matras .text-content p:not(:last-child) {
     margin-bottom: 3rem;
 }
 
-.about-us .card img {
-    justify-self: flex-start;
+.matras > .container {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
+.matras img {
+    max-width: 550px;
+    height: 256px;
+    display: inline-block;
+    margin-top: 4rem;
+    margin-right: 3rem;
+}
+
+.matras .text-content {
+    flex-basis: 50%;
+}
+
+
+.showroom {
+    padding: 10rem 0 9.3rem;  
+}
+
+.showroom h2 {
+    font-size: 4.8rem;
+    margin-bottom: 4.3rem;
+}
+
+.showroom > .container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.showroom > .container > div {
+    flex-basis: 50%;
+}
+
+.showroom .text-content {
+    padding-right: 1rem;
+}
+
+.showroom .address {
+    padding-top: 3.6rem;
+}
+
+.showroom .address img {
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-right: 1.8rem;
+    margin-top: 5px;
+}
+
+.showroom .address p {
+    font-size: 1.9rem;
+    font-family: "DIN Pro Light";
+}
+
+.showroom .img-content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.showroom .img-content > a img {
+    width: 422px;
+    height: 360px;
+}
+
+.showroom .img-content .thumbs img {
+    width: 122px;
+    height: 96px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.showroom .img-content .thumbs {
+    display: flex;
+    flex-flow: column;
+}
+
+.manifacturer {
+    background-image: url(../img/bg_4.jpg);
+    background-attachment: fixed;
+    color: #ffffff;
+    padding: 4rem 0;
+}
+
+.manifacturer img {
+    float: left;
+    animation: rotate 4s infinite linear;
+}
+
+.manifacturer .text-content {
+    float: left;
+    margin-left: 4.2rem;  
+}
+
+.manifacturer .text-content h2 {
+    font-size: 2.7rem;
+    padding-top: 22px;
+    margin-bottom: 22px;
+}
+
+.manifacturer .text-content p {
+    font-size: 1.7rem;
+    font-family: "DIn Pro Light";
+    vertical-align: middle;
+    max-width: 800px;
+}
+
+
+.manifacturer .container:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.designer {
+    background-color: #fff;
+    padding-top: 10.8rem;
+    padding-bottom: 8.5rem;
+
+}
+
+
+.designer > .container {
+    display: flex;
+    flex-flow: ro nowrap;
+}
+
+.designer > .container > * {
+    flex-basis: 50%;
+}
+
+.designer h2 {
+    margin-bottom: 4.2rem;
+    font-size: 4.2rem;
+}
+
+.designer .text-content {
+    margin-left: 4.8rem;
+}
+
+.designer .text-content__footer {
+    margin-top: 4.8rem;
+    font-size: 1.9rem;
+    font-family: "DIN Pro ";
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.designer .text-content__footer p{
+    margin-left: 2.4rem;
+    font-family: "DIN Pro";
+    font-size: 1.9rem;
+}
+
+.contact-us {
+    background-image: url(../img/bg-7.jpg);
+    background-attachment: fixed;
+    padding: 7rem 0 6.5rem;
+    color: #ffffff;
+}
+
+.contact-us .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 96rem;
+}
+
+.contact-us .container > .text-content {
+    flex-basis: 60%;;
+}
+
+.contact-us form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: #000000;
+    padding: 3.5rem 4rem 5.5rem;
+    text-align: center;
+    max-width: 31rem;
+}
+
+.contact-us form h2 {
+    font-size: 1.7rem;
+    font-family: "DIN Pro Light";
+    margin-bottom: 2rem;
+}
+
+.contact-us form input[type='text'] {
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 1rem 1.4rem 1rem;
+}
+
+.contact-us form input[type='text']:focus {
+    border-color: #f10;
+    outline: none;
+    box-shadow: 0px 0px 3px #f10;
+    flex-basis: 100%;
+}
+
+.contact-us form input[type='checkbox'],
+.contact-us label {
+    font-size: 9px;
+}
+
+.contact-us .button {
+    width: 100%;
+    padding: 2rem 2.2rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-us h2 {
+    font-size: 4.8rem;
+    margin-bottom: 3.8rem;
+}
+
+.contact-us .text-content p{
+    font-size: 2.9rem;
+    font-family: 'DIN Pro Light';
+}
+
+
+
+.contact-us form {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.footer > .container {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 7.5rem 0 0;
+    justify-content: end;
+}
+
+.icon-container {
+    /* flex-grow: 2; */
+    margin-right: auto;
+}
+
+.footer .text-content {
+    text-align: right;
+}
+
+.footer .text-content h2 {
+    white-space: nowrap;
+}
+
+.footer .text-content a {
+    color: #000000;
+    font-size: 2.4rem;
+    font-family: "DIN Pro Medium";
+}
+
+.footer .copyright {
+    flex-basis: 100%;
+}
+
+.footer .map-container {
+    margin-left: 2rem;
+}
+
+
+.copyright {
+    padding: 7.4rem 0 1rem;
+    font-size: 1.7rem;
+    font-family: "DIN Pro Light";
+}
+
+.copyright p {
+    font-size: 1.7rem;
+    font-family: "DIN Pro Light";
+
+}
+
+ymaps {
+    max-width: none;
+    max-height: none;
+}
+
+
+
 @media (max-width: 1200px) {
-    .nav .container {
+    .nav {
         flex-flow: row wrap;
+        justify-content: space-around;
     }
     .nav__menu {
         order: 4;
         flex-basis: 100%;
-        justify-content: center;
+        /* justify-content: center; */
+        text-align: center;
+        justify-self: center;
     }
 }
+
+@media (max-width: 770px) {
+    .nav {
+        background-color: #ffffff;
+        justify-content: center;
+        height: 60px;
+        padding-top: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav__logo {
+        width: 58px;
+    }
+
+    .hamburger .line{
+        display: block;
+        height: 2px;
+        width: 15px;
+        background-color: #000;
+    }
+}
+
 
 @keyframes bubble {
     0% {
@@ -281,3 +992,24 @@ body {
     }
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+    
+    50% {
+        transform: rotate(180deg);
+    }
+    
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }    
+}

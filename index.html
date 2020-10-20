@@ -1,97 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8">
     <title>Arniko - кровати для крепкого сна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arniko - кровати для крепкого сна с мягкой обивкой от производителя">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="fonts/transfonter.org-20201011-092549/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <nav class='nav'>
-        <div class="container">
-            <div class="nav__logo">
-                <a href="" class="nav__logo--link">Arniko</a>
-            </div>
+    <header class="header">
+        <nav class='nav'>
+            <button class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <a href="" class="nav__logo--link">
+                <img src="img/logo.png" alt="">
+            </a>
             <ul class="nav__menu">
-                <li class="nav__item"><a href="#">1:lorem</a></li>
-                <li class="nav__item"><a href="#">1:lorem</a></li>
-                <li class="nav__item"><a href="#">1:lorem</a></li>
-                <li class="nav__item"><a href="#">1:lorem</a></li>
-                <li class="nav__item"><a href="#">1:lorem</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
             </ul>
-            <div class="nav__info">
-                <p class="nav__info--text">
+            <div class="nav__aside">
+                <p class="nav__aside--text">
                     г. Москва, ул. Тимирязевская, д.2/3
                     <br>
                     (ТЦ "Парк 11", 3 этаж)
                 </p>
-                <p class="nav__info--text">
-                    <a href="http://" target="_blank" rel="noopener noreferrer">+7 (495) 142-93-80</a>
-                    <br>
-                    <button class="nav__button">заказать звонок</button>
+                <p class="nav__aside--text">
+                    <a  class="nav__phone fancy_underline" href="http://">+7 (495) 142-93-80</a>
+                    <button class="nav__button">Заказать звонок</button>
+                </p>
+            </div>
+        </nav>    
+        <div class="jumbotron">
+            <div class="container">
+                <div class="jumbotron__text--container">
+                    <div class="jumbotron__text--header">
+                        <h1>
+                            Кровати на заказ
+                            <br>
+                            по дизайн проектам
+                            <br>
+                        </h1>
+                        <p>С мягкой обивкой от производителя</p>
+                    </div>
+                    <div class="jumbotron__text--content">
+                        <p>
+                            Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
+                        </p>
+                        <div class="jumbotron__icon-container"></div>
+                        <div class="jumbotron__input--container blink">
+                            <input type="button" class="jumbotron__call-to-action" value="Подобрать и рассчитать" />
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="jumbotron__link--slidedown">&darr;</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+                <img src="img/peim1.png" alt="">
+                <h2>Минимальные сроки</h2>
+                <p>Минимальный срок изготовления от 3 до 7 дней </p>
+            </div>
+            <div class="card">
+                <img src="img/peim2.png" alt="">
+                <h2>Собственное производство</h2>
+                <p>Контроль качества продукции на каждом этапе изготовления</p>
+            </div>
+            <div class="card">
+                <img src="img/peim3.png" alt="">
+                <h2>Изготовление на заказ</h2>
+                <p>Изготовим любую модель
+                    кровати или дивана по вашему эскизу</p>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="gallery__header">
+                <h2>Популярные модели</h2>
+                <p>кроватей с мягкой обивкой</p>
+                <ul class="gallery__type">
+                    <li><a class="button button-transparent active" href="#">Диваны</a></li>
+                    <li><a class="button button-transparent"  href="#">Диваны</a></li>
+                </ul>
+            </div>
+            <ul class="gallery__content">
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+                <li class="gallery__items">
+                    <div class="gallery__item--img"><img src="img/1-(1).jpg" alt=""></div>
+                    <div class="gallery__item--content">
+                        <div class="gallery__item--info">
+                            <span class='item-type'>lorem</span>
+                            <h3 class="item-name">lorem</h2>
+                            <p class="price">52.000</p>
+                        </div>
+                        <div class="gallery__item--thumbs">
+                            <a href=""><img src="img/1-(1).jpg" alt=""></a>
+                            <a href=""><img src="img/1-(2).jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="gallery__item--ordering">
+                        <input type="button" value="lorem" class="button button-transparent">
+                        <input type="button" value="lorem" class="button button-attention">
+                    </div>
+                </li>
+
+            </ul>
+            <div class="gallery__footer">
+                <p>Хотите увидеть еще модели кроватей, тогда вы можете скачать наш полный каталог кроватей, в формате PDF</p>
+                <div class="blink">
+                    <input type="button" class="button button-dark" value="полный каталог">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="looking-for">
+        <div class="container">
+            <h2>Не нашли понравившуюся модель кровати в нашем каталоге?</h2>
+            <p>Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
+            <img src="img/bed-icon.png" alt="">
+            <div class="input-container blink">
+                <input type="button" class="button button-attention" value="Отправить макет или фото">
+            </div>
+        </div>
+    </div>
+    <div class="your-choice">
+        <div class="container">
+            <div class="your-choice__text">                
+                <h2>Вы можете выбрать</h2>
+                <p>любой вариант комплектации, материала и обивки кровати</p>
+            </div>
+            <ul class="card-container">
+                <li>
+                    <img src="img/variant6.jpg" alt="">
+                    <p>Варианты ткани
+                        и обивки</p>
+                </li>
+                <li>
+                    <img src="img/variant6.jpg" alt="">
+                    <p>Ортопедическую
+                        решетку</p>
+                </li>
+                <li>
+                    <img src="img/variant6.jpg" alt="">
+                    <p>Подъемный
+                        механизм</p>
+                </li>
+                <li>
+                    <img src="img/variant6.jpg" alt="">
+                    <p>Фурнитуру и
+                        основание</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="matras">
+        <div class="container">
+            <img src="img/matras.png" alt="matras">
+            <div class="text-content">
+                <h2>Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
+                <p>
+                    Выбрали кровать? Теперь предстоит определиться с выбором матраса, ведь от него будет зависеть качество вашего сна!
+                </p>
+                <p>
+                    У нашей компании есть большой выбор матрасов разного размера, высоты и жесткости
                 </p>
             </div>
         </div>
-    </nav>    
-    <div class="jumbotron">
+    </div>
+    <div class="showroom">
         <div class="container">
-            <div class="jumbotron__text--container">
-                <div class="jumbotron__text--header">
-                    <h1>
-                        Кровати на заказ
-                        <br>
-                        по дизайн проектам
-                        <br>
-                        <span>С мягкой обивкой от производителя</span>
-                    </h1>
-                </div>
-                <div class="jumbotron__text--content">
-                    <h2>
-                        Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
-                    </h2>
-                    <img src="img/jumbotron-icon.jpeg" alt="" id="jumbotron__image">
-                    <div class="jumbotron__input--container">
-                        <input type="button" class="jumbotron__call-to-action" value="Подобрать и рассчитать" />
-                    </div>
+            <div class="text-content">
+                <h2>Мы ждем вас в нашем Шоуруме</h2>
+                <p>Где вы сможете в живую увидеть наши модели кроватей, пообщаться с консультантами и выбрать подходящую для вас модель!</p>
+                <div class="address">
+                    <img src="img/map.png" alt="" class="map-icon">
+                    <p>Москва, ул. Тимирязевская, д.2/3 <br>
+                        (ТЦ "Парк 11", 3 этаж)</p>
                 </div>
             </div>
-            <a href="#" class="jumbotron__link--slidedown">&darr;</a>
+            <div class="img-content">
+                <a href="#"><img src="img/showroom4.jpg" alt=""></a>
+                <div class="thumbs">
+                    <a href="#"><img src="img/showroom4.jpg" alt=""></a>
+                    <a href="#"><img src="img/showroom5.jpg" alt=""></a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="about-us">
-            <ul class="about-us__card-container">
-                <li>
-                    <div class="card">
-                        <img src="img/peim1.png" alt="">
-                        <h2>Минимальные сроки</h2>
-                        <p>
-                            Минимальный срок изготовления от 3 до 7 дней                                                
-                        </p>
+    <div class="manifacturer">
+        <div class="container">
+            <img src="img/cog.png" alt="">
+            <div class="text-content">
+                <h2>Мы производители</h2>            
+                <p>Арнико это прямой фабричный производитель мягкой мебели на заказ по любым размерам, эскизам и фото.</p>
+            </div>
+        </div>
+    </div>
+    <div class="designer">
+        <div class="container">
+            <img src="img/dizayn.png" alt="bed-design">
+            <div class="text-content">
+                <h2>Вы дизайнер?</h2>
+                <p>В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
+                <div class="text-content__footer">
+                    <img src="img/small-bed.png" alt="">
+                    <p>Мы предоставим вам 3D модели всех наших кроватей
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us">
+        <div class="container">
+            <div class="text-content">
+                <h2>Свяжитесь с нами!</h2>
+                <p>
+                    Наши менеджеры подробно проконсультируют вас по выбору кровати и просчитают любое изделие на заказ в течение 15 минут
+                </p>
+            </div>
+            <div class="form-container">
+                <form action="">
+                    <h2>Введите свои данные и наш
+                        специалист свяжется с вами</h2>
+                    <input type="text" placeholder="Введите свое имя">
+                    <input type="text" placeholder="Введите свой телефон">
+                    <div class="blink">
+                        <input type="button" value="Получить консультацию" class="button button-attention blink">
                     </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <img src="img/peim2.png" alt="">
-                        <h2>Минимальные сроки</h2>
-                        <p>
-                            Минимальный срок изготовления от 3 до 7 дней                                                
-                        </p>
-    
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <img src="img/peim3.png" alt="">
-                        <h2>Изготовление на заказ</h2>
-                        <p>
-                            Изготовим любую модель
-                            кровати или дивана по вашему эскизу
-                        </p>
-                    </div>
-                </li>
-            </ul>
+                    <label for="check">                        
+                        <input type="checkbox" name="check" id="check">
+                        Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="icon-container">
+                <a href="#" class="icon">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="text-content">
+                <h2>
+                    <a class="fancy_underline" href="#">+7 (495) 142-93-80</a>
+                </h2>
+                <h2 class="d-ib">
+                    <a class="fancy_underline" href="#">+7 (495) 142-93-80</a>
+                    <a href="#" class="icon">
+                        <img src="img/viber.jpg" alt="viber">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="img/whatsapp.jpg" alt="whatsapp">
+                    </a>
+                </h2>
+                <p>
+                    <a href="#"><img src="img/insta1.png" alt="instagram"></a>
+                </p>
+            </div>
+            <div class="map-container">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
+                <!-- <iframe src="https://yandex.com/map-widget/v1/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>                 -->
+            </div>
+        </div>
+        
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
         </div>
     </div>
     <script src='script/main.js'></script>
