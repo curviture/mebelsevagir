@@ -1,3 +1,5 @@
+/*resets*/
+
 *,
 *:after,
 *:before {
@@ -6,10 +8,11 @@
     box-sizing: inherit;
 }
 
-
 ul {
     list-style-type: none;
 }
+
+/*base*/
 
 html {
     width: 100%;
@@ -19,18 +22,11 @@ html {
 
 body {
     height: 100%;
+    font-family: "DIN Pro";
+    font-size: 2.4rem;
+    box-sizing: border-box;
 }
 
-
-a {
-    text-decoration: none;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "DIN Pro Black";
-}
 
 .container {
     display: flex;
@@ -38,14 +34,7 @@ h3 {
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 5.3rem;
-    text-transform: lowercase;
-}
-
-h1::first-letter {
-    text-transform: uppercase;
-}
+/*inputs and buttons*/
 
 .button {
     font-family: "DIN Pro";
@@ -56,6 +45,40 @@ h1::first-letter {
     transition: all 0.15;
     border: 1px solid #000;
     cursor: pointer;
+}
+
+/*typography*/
+
+h1,
+h2,
+h3 {
+    font-family: "DIN Pro Black";
+}
+
+h1,
+h2 {
+    font-size: 5.3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h2 {
+    font-size: 5.3rem;
+}
+
+h2.medium {
+    font-size: 4.8rem;
+}
+
+p {
+    font-size: 2.4rem;
+}
+
+.text-white {
+    color: #ffffff;
 }
 
 .button-transparent {
@@ -77,23 +100,6 @@ h1::first-letter {
     background-color: #000000;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "DIN Pro Black";
-}
-
-h2 {
-    font-size: 5.3rem;
-}
-
-p {
-    font-size: 2.4rem;
-}
-
-.button-attnetion:hover {
-
-}
 
 body {
     width: 100%;
@@ -102,6 +108,11 @@ body {
     background-color: #eee;
     font-family: 'DIN Pro';
     overflow-x: hidden;
+    color: #000000;
+}
+
+.container-fluid-fx-bg {
+    background-attachment: fixed;
 }
 
 .container {
@@ -112,6 +123,8 @@ body {
 .header {
     background: url('../img/bg-1.jpg') 50% 0;
     background-size: cover;
+    height: 97.5vh;
+    position: relative;
 }
 
 .header h1 span{
@@ -119,11 +132,11 @@ body {
     font-family: "DIN Pro";
 }
 
-.header h1 span::first-letter {
-    text-transform: uppercase;
-}
-
 .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
@@ -155,21 +168,27 @@ body {
     display: inline-block;
 }
 
+.fancy_underline {
+    position: relative;
+}
+
 .fancy_underline:after {
     content: '';
-    display: inline-block;
-    width: 1%;
+    display: block;
+    width: 100%;
     height: 2px;
+    top: -10px;
+    left: 0;
     /* background-color: rgba(255,255,255,0); */
-    background-color: inherit;
+    background-color: currentColor;
     border: none;
-    transition: all 0.25s .25s;
+    transform: scaleX(0);
+    transition: all 0.3s .05s;
 }
 
 .fancy_underline:hover:after {
-    width: 100%;
-    background-color: rgba(255,255,255,1);
-
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .nav__item a{
@@ -178,7 +197,6 @@ body {
     color: #ffffff;
     display: block;
     text-align: center;
-    line-height: 0.7;
     font-family: 'DIN Pro';
 }
 
@@ -196,7 +214,6 @@ body {
     /* white-space: nowrap; */
     font-size: 1.9rem;
     font-family: 'DIN Pro Medium';
-    line-height: 0.35;
     margin-bottom: 0.7rem;
     text-align: center;
 }
@@ -215,12 +232,9 @@ body {
 }
 
 .jumbotron {
-    padding-top: 200px;
-    height: 90vh;
-    width: 100vw;
-    position: relative;
+    height: 100%;
+    padding-top: 150px;
 }
-
 
 .jumbotron__link--slidedown {
     position: absolute;
@@ -240,6 +254,10 @@ body {
     box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
     z-index: 100;
     animation: bubble 3s 3s infinite
+}
+
+.jumbotron__link--slidedown:hover {
+    animation: bubble 0s 0s, pulse-shadow 1s 1s infinite;
 }
 
 .jumbotron .container {
@@ -379,10 +397,21 @@ body {
     font-size: 1.7rem;
 }
 
+.card:hover {
+    box-shadow: 0 0 0px 30px rgba(141, 153, 174, 0.3);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
 .card img {
     display: block;
     justify-self: start;
     margin-bottom: auto;
+}
+
+.card-container .card:nth-child(2) img {
+    animation: rotate 4s 0s infinite linear;
+
 }
 
 .card h2 {
@@ -1011,5 +1040,23 @@ ymaps {
 
     100% {
         transform: rotate(360deg);
+    }    
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    25% {
+        box-shadow: 0 3px 3px 14px rgba(255,255,255,0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(255,255,255,0.5);        
+    }
+
+    75% {
+        box-shadow: 0 0 0 6px rgba(255,255,255,0.5);
     }    
 }
