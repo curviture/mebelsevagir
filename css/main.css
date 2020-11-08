@@ -20,11 +20,29 @@ html {
     font-size: 62.5%;
 }
 
+.bg-fixed {
+    background-attachment: fixed;
+}
+
 body {
     height: 100%;
     font-family: "DIN Pro";
     font-size: 2.4rem;
     box-sizing: border-box;
+}
+
+/*grid*/
+
+.col-2 {
+    flex-basis: 50%;
+}
+
+.col-3 {
+    flex-basis: 33%;
+}
+
+.col-4 {
+    flex-basis: 25%;
 }
 
 
@@ -125,9 +143,11 @@ body {
     background-size: cover;
     height: 97.5vh;
     position: relative;
+    width: 100%;
+    z-index: 2;
 }
 
-.header h1 span{
+.header h1 span {
     font-size: 3.2rem;
     font-family: "DIN Pro";
 }
@@ -145,6 +165,7 @@ body {
     max-width: 1120px;
     margin: 0 auto;
     font-size: 1.7rem;
+    width: 100%;
 }
 
 .hamburger {
@@ -204,6 +225,11 @@ body {
     display: flex;
     flex-flow: row nowrap;
     text-align: right;
+
+}
+
+.nav__aside p {
+    font-size: 1.9rem;
 }
 
 .nav__aside p:not(:last-child) {
@@ -229,6 +255,10 @@ body {
 .nav__button:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+.nav__socials {
+    display: none;
 }
 
 .jumbotron {
@@ -265,8 +295,6 @@ body {
 }
 
 .jumbotron__text--container {
-    display: flex;
-    flex-flow: row nowrap;
     align-items: flex-end;
     color: #ffffff;
     height: 100%;
@@ -275,14 +303,7 @@ body {
 }
 
 .jumbotron__text--header {
-    flex-grow: 1.1;
-    flex-basis: 52%;
 }
-
-.jumbotron__text--content {
-    flex-basis: 48%;
-}
-
 
 .jumbotron h1 {
     font-family: 'DIN Pro Black';
@@ -373,7 +394,7 @@ body {
 
 .card-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     padding-top: 11rem;
@@ -398,9 +419,10 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 0 0px 30px rgba(141, 153, 174, 0.3);
-    transform: scale(1.05);
+    box-shadow: 0 0 13px 3px #d1d1d1;
+    transform: scale(1.02);
     transition: all 0.3s;
+    perspective: 1000px;
 }
 
 .card img {
@@ -413,6 +435,15 @@ body {
     animation: rotate 4s 0s infinite linear;
 
 }
+
+.card-container .card:nth-child(1) img {
+    animation: squeeze 3s 0s infinite linear;
+}
+
+.card-container .card:nth-child(3) img {
+    animation: stretch 3s 0s infinite linear;
+}
+
 
 .card h2 {
     margin-bottom: 1.5rem;
@@ -594,7 +625,7 @@ body {
     font-family: "DIN Pro Black";
     max-width: 72rem;
     margin-bottom: 3.5rem;
-    line-height: 0.8;
+    line-height: 1;
 }
 
 .looking-for p {
@@ -617,8 +648,6 @@ body {
 }
 
 .your-choice .container{
-    display: flex;
-    flex-flow: row nowrap;
     padding: 11.5rem 0 11.5rem;
 }
 
@@ -663,7 +692,7 @@ body {
 
 .matras > .container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
 }
 
 .matras img {
@@ -690,7 +719,7 @@ body {
 
 .showroom > .container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .showroom > .container > div {
@@ -742,9 +771,8 @@ body {
 
 .manifacturer {
     background-image: url(../img/bg_4.jpg);
-    background-attachment: fixed;
-    color: #ffffff;
     padding: 4rem 0;
+    align-items: center;
 }
 
 .manifacturer img {
@@ -786,13 +814,12 @@ body {
 
 
 .designer > .container {
-    display: flex;
-    flex-flow: ro nowrap;
+
 }
 
-.designer > .container > * {
+/* .designer > .container > * {
     flex-basis: 50%;
-}
+} */
 
 .designer h2 {
     margin-bottom: 4.2rem;
@@ -808,7 +835,7 @@ body {
     font-size: 1.9rem;
     font-family: "DIN Pro ";
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
 }
 
 .designer .text-content__footer p{
@@ -952,9 +979,16 @@ ymaps {
 
 
 @media (max-width: 1200px) {
+    .container {
+        flex-flow: row wrap;
+        max-width: 70rem;
+        padding: 0 .5rem;
+    }
+
     .nav {
         flex-flow: row wrap;
         justify-content: space-around;
+        max-width: 70rem;
     }
     .nav__menu {
         order: 4;
@@ -963,31 +997,266 @@ ymaps {
         text-align: center;
         justify-self: center;
     }
+
+    .md-col-1 {
+        flex-basis: 100%;
+    }
+
+    .jumbotron {
+        text-align: center;
+    }
+
+    .jumbotron .container {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jumbotron__text--header {
+        margin-bottom: -5.7rem;
+    }
+
+    .jumbotron__text--content {
+        max-width: 535px;
+        padding: 3.4rem 5rem;
+        margin-bottom: auto;
+        margin-top: -1rem;
+    }
+
+    .jumbotron__text--content p {
+        /* margin-bottom: 0; */
+    }
+
 }
 
 @media (max-width: 770px) {
+
+    .container {
+        max-width: 30rem;
+    }
+
+    body {
+        font-size: 1.3rem;
+    }
+
     .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6rem;
         background-color: #ffffff;
-        justify-content: center;
-        height: 60px;
+        max-width: 70rem;
+        color: #000000;
         padding-top: 0;
     }
 
+    .nav .container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav__logo--link {
+        margin: ;
+    }
+
+    .nav a {
+        color: #000000;
+    }
+
+    .hamburger .line {
+        display: block;
+        height: 5px;
+        width: 2.5rem;
+        background-color: #000000;
+        margin-bottom: .5rem;
+    }
+        
+    #menu {
+        display: none;
+    }
+    
+    .nav__menu {
+        display: none;
+    }
+        
     .hamburger {
         display: block;
     }
-
-    .nav__logo {
-        width: 58px;
+    
+    .nav__logo--link img {
+        width: 6rem;
+        height: 3rem;
     }
 
-    .hamburger .line{
+    .nav__socials {
         display: block;
-        height: 2px;
-        width: 15px;
-        background-color: #000;
+        margin-right: 7px;
     }
+
+    .nav__socials a{
+        display: inline-block;
+    }
+
+    .nav__socials img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .nav__aside .address{
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 1.3rem;
+        color: #ffffff;
+    }
+
+    .nav__aside p:nth-child(2) {
+        display: block;
+    }
+
+    .nav__button {
+        background-color: #f10;
+        color: #ffffff;
+        font-size: 1.3rem;
+        padding: 2px 7px;
+        border: none;
+    }
+
+    .nav__aside a {
+        font-size: 1.4rem;
+        font-family: "Din Pro Medium";
+        margin-bottom: 0;
+    }
+
+    .nav__logo--link {
+        margin: 0 7px;
+    }
+
+    .nav__menu {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(255,255,255,0.8);
+        transform: scaleX(0);
+        transition: all 0.1s;
+    }
+
+    .nav__menu.open {
+        transform: scaleX(1);        
+        z-index: 1000;
+        padding-bottom: 30vh;
+    }
+
+    .nav__menu {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    /* .nav__menu.open::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(255,255,255,0.9);
+        z-index: -1;        
+    } */
+
+    
+    .jumbotron h1 {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+    }
+    
+    .jumbotron__text--header p {
+        margin-bottom: 0;
+        font-size: 1.9rem;
+    }
+
 }
+
+
+#menu {
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #000000;
+    box-shadow: 0 0 5px #e1e1e1;
+}
+
+#menu a {
+    color: #000000;
+}
+
+#menu p {
+    color: #000000;
+}
+
+#menu .nav {
+    position: relative;
+    padding-top: 1rem;
+}
+
+#menu .nav__menu{
+    margin-left: 2.4rem;
+    padding-top: 1.2rem;
+}
+
+#menu .nav__item a{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+
+#menu .nav__aside {
+    display: flex;
+    flex-flow: row;
+}
+
+#menu .nav__aside--text {
+    font-size: 1.6rem;
+}
+
+#menu .order-call  {
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+#menu .nav__phone {
+    margin-bottom: 0;
+}
+
+#menu .social a {
+    display: inline-block;
+    transition: all 0.1s;
+}
+
+#menu .social a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 3px #e1e1e1;
+}
+
+#menu .social a img{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
 
 
 @keyframes bubble {
@@ -1060,3 +1329,90 @@ ymaps {
         box-shadow: 0 0 0 6px rgba(255,255,255,0.5);
     }    
 }
+
+
+@keyframes squeeze {
+    0% {
+        transform: translateX(-15px)
+    }
+
+    10% {
+        transform: translateX(15px);
+    }
+
+    15% {
+        transform: translateX(-15px)
+    }
+
+    20% {
+        transform: translateX(15px);
+    }
+    
+    25% {
+        transform: translateX(0)
+    }
+
+    45% {
+        transform: translateX(0)        
+    }
+
+    50% {
+        transform: translateX(-15px)
+    }
+
+    60% {
+        transform: translateX(15px);
+    }
+
+    65% {
+        transform: translateX(-15px)
+    }
+
+    70% {
+        transform: translateX(15px);
+    }
+    
+    75% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes stretch {
+    0% {
+        transform: scaleX(1);
+    }
+
+    10% {
+        transform: scaleX(1.2);
+    }
+    
+    20% {
+        transform: scaleX(0.8);
+    }    
+}
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+/* .svg-icon {
+    width: 1em;
+    height: 1em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: #000;
+  }
+  
+  .svg-icon circle {
+    stroke: #000;
+    stroke-width: 1;
+  }
+
+#ad {
+    transform: scale(7);
+    justify-self: start;
+    margin-bottom: auto;
+} */

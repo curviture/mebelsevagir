@@ -12,79 +12,82 @@
 <body>
     <header class="header bg-fixed text-white">
         <nav class='nav'>
-            <button class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-            <a href="" class="nav__logo--link">
-                <img src="img/logo.png" alt="">
-            </a>
-            <ul class="nav__menu">
-                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
-                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
-                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
-                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
-            </ul>
-            <div class="nav__aside">
-                <p class="nav__aside--text">
-                    г. Москва, ул. Тимирязевская, д.2/3
-                    <br>
-                    (ТЦ "Парк 11", 3 этаж)
-                </p>
-                <p class="nav__aside--text">
-                    <a  class="nav__phone fancy_underline" href="http://">+7 (495) 142-93-80</a>
-                    <button class="nav__button">Заказать звонок</button>
-                </p>
+            <div class="container">
+
+                <a class="hamburger" id="menu-open">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </a>
+                <a href="" class="nav__logo--link">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <ul class="nav__menu" id="nav__menu">
+                    <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                    <li class="nav__item"><a class="fancy_underline" href="#">Диваны</a></li>
+                    <li class="nav__item"><a class="fancy_underline" href="#">На заказ</a></li>
+                    <li class="nav__item"><a class="fancy_underline" href="#">Шоурум</a></li>
+                </ul>
+                <div class="nav__socials">
+                    <a href=""><img src="img/insta1.png" alt=""></a>
+                    <a href=""><img src="img/whatsapp.jpg" alt=""></a>
+                </div>
+                <div class="nav__aside">
+                    <p class="nav__aside--text address">
+                        г. Москва, ул. Тимирязевская, д.2/3
+                        <br>
+                        (ТЦ "Парк 11", 3 этаж)
+                    </p>
+                    <p class="nav__aside--text">
+                        <a  class="nav__phone fancy_underline" href="http://">+7 (495) 142-93-80</a>
+                        <input class="nav__button" type="button" value="Заказать звонок">
+                    </p>
+                </div>
             </div>
         </nav>    
         <div class="jumbotron">
-            <div class="container">
-                <div class="jumbotron__text--container">
-                    <div class="jumbotron__text--header">
-                        <h1>
-                            Кровати на заказ
-                            <br>
-                            по дизайн проектам
-                            <br>
-                        </h1>
-                        <p>С мягкой обивкой от производителя</p>
-                    </div>
-                    <div class="jumbotron__text--content">
-                        <p>
-                            Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
-                        </p>
-                        <div class="jumbotron__icon-container"></div>
-                        <div class="jumbotron__input--container blink">
-                            <input type="button" class="jumbotron__call-to-action" value="Подобрать и рассчитать" />
-                        </div>
+            <div class="container jumbotron__text--container">
+                <div class="jumbotron__text--header col-2 md-col-1">
+                    <h1>
+                        Кровати на заказ
+                        <br>
+                        по дизайн проектам
+                        <br>
+                    </h1>
+                    <p>С мягкой обивкой от производителя</p>
+                </div>
+                <div class="jumbotron__text--content col-2 md-col-1">
+                    <p>
+                        Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
+                    </p>
+                    <div class="jumbotron__icon-container"></div>
+                    <div class="jumbotron__input--container blink">
+                        <input type="button" class="jumbotron__call-to-action" value="Подобрать и рассчитать" />
                     </div>
                 </div>
-                <a href="#" class="jumbotron__link--slidedown">&darr;</a>
+                <a href="#gallery" class="jumbotron__link--slidedown">&darr;</a>
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="card-container">
-            <div class="card">
-                <img src="img/peim1.png" alt="">
-                <h2>Минимальные сроки</h2>
-                <p>Минимальный срок изготовления от 3 до 7 дней </p>
-            </div>
-            <div class="card">
-                <img src="img/peim2.png" alt="">
-                <h2>Собственное производство</h2>
-                <p>Контроль качества продукции на каждом этапе изготовления</p>
-            </div>
-            <div class="card">
-                <img src="img/peim3.png" alt="">
-                <h2>Изготовление на заказ</h2>
-                <p>Изготовим любую модель
-                    кровати или дивана по вашему эскизу</p>
-            </div>
+    <!-- <div class="container card-container">
+        <div class="card md-col-3 col-3">
+            <img src="img/peim1.png" alt="">
+            <h2>Минимальные сроки</h2>
+            <p>Минимальный срок изготовления от 3 до 7 дней </p>
+        </div>
+        <div class="card md-col-3 col-3">
+            <img src="img/peim2.png" alt="">
+            <h2>Собственное производство</h2>
+            <p>Контроль качества продукции на каждом этапе изготовления</p>
+        </div>
+        <div class="card md-col-3 col-3">
+            <img src="img/peim3.png" alt="">
+            <h2>Изготовление на заказ</h2>
+            <p>Изготовим любую модель
+                кровати или дивана по вашему эскизу</p>
         </div>
     </div>
-        <div class="container">
+        <div class="container" id="gallery">
             <div class="gallery">
                 <div class="gallery__header">
                     <h2>Популярные модели</h2>
@@ -274,8 +277,8 @@
             <h2>Не нашли понравившуюся модель кровати в нашем каталоге?</h2>
         </div>
         <div class="container">
-            <p>Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
-            <img src="img/bed-icon.png" alt="">
+            <p class="md-col-1">Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
+            <img class="md-col-1" src="img/bed-icon.png" alt="">
         </div>
         <div class="container">
             <div class="input-container blink">
@@ -285,7 +288,7 @@
     </div>
     <div class="your-choice">
         <div class="container">
-            <div class="your-choice__text">                
+            <div class="your-choice__text col-4">                
                 <h2>Вы можете выбрать</h2>
                 <p>любой вариант комплектации, материала и обивки кровати</p>
             </div>
@@ -296,17 +299,17 @@
                         и обивки</p>
                 </li>
                 <li>
-                    <img src="img/variant6.jpg" alt="">
+                    <img src="img/variant5.jpg" alt="">
                     <p>Ортопедическую
                         решетку</p>
                 </li>
                 <li>
-                    <img src="img/variant6.jpg" alt="">
+                    <img src="img/variant7.jpg" alt="">
                     <p>Подъемный
                         механизм</p>
                 </li>
                 <li>
-                    <img src="img/variant6.jpg" alt="">
+                    <img src="img/variant8.jpg" alt="">
                     <p>Фурнитуру и
                         основание</p>
                 </li>
@@ -347,7 +350,7 @@
             </div>
         </div>
     </div>
-    <div class="manifacturer">
+    <div class="manifacturer bg-fixed text-white">
         <div class="container">
             <img src="img/cog.png" alt="">
             <div class="text-content">
@@ -358,8 +361,11 @@
     </div>
     <div class="designer">
         <div class="container">
-            <img src="img/dizayn.png" alt="bed-design">
-            <div class="text-content">
+            <div col-2>
+                <img src="img/dizayn.png" alt="bed-design">
+
+            </div>
+            <div class="text-content col-2">
                 <h2>Вы дизайнер?</h2>
                 <p>В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
                 <div class="text-content__footer">
@@ -431,6 +437,34 @@
             <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
         </div>
     </div>
+    <div id="menu">
+        <nav class="nav">
+            <a href="#" class="brand-logo"><img src="img/logo.png" alt="brand logo"></a>
+            <ul class="nav__menu">
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+                <li class="nav__item"><a class="fancy_underline" href="#">Кровати</a></li>
+            </ul>
+            <div class="nav__aside">
+                <p class="nav__aside--text">
+                    г. Москва, ул. Тимирязевская, д.2/3
+                    <br>
+                    (ТЦ "Парк 11", 3 этаж)
+                </p>
+                <p class="nav__aside--text">
+                    <a  class="nav__phone fancy_underline" href="http://">+7 (495) 142-93-80</a>
+                    <a class="order-call">Заказать звонок</a>
+                </p>
+
+                <p class="social">
+                    <a href=""><img src="img/viber.jpg" alt=""></a>
+                    <a href=""><img src="img/whatsapp.jpg" alt=""></a>
+                    <a href=""><img src="img/insta1.png" alt=""></a>
+                </p>
+            </div>
+        </nav>
+    </div> -->
     <script src='script/main.js'></script>
 </body>
 </html>
