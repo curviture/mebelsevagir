@@ -168,7 +168,8 @@ body {
     width: 100%;
 }
 
-.hamburger {
+.hamburger,
+.nav__item--close {
     display: none;
 }
 
@@ -274,6 +275,7 @@ body {
     color: #000000;
     border-radius: 50%;
     border-color: rgba(255,255,255,0.5);
+    margin-left: -2.5rem;
     border-width: 2rem;
     display: block;
     background-color: #fff;
@@ -336,7 +338,6 @@ body {
 .jumbotron__icon-container{
     width: 177px;
     height: 83px;
-    background: url(../img/bed-icon-small.png) center;
     display: inline-block;
 }
 
@@ -396,18 +397,18 @@ body {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 11rem;
 } 
 
-.card-container .card:not(:last-child) {
+/* .card-container .card:not(:last-child) {
     margin-right: 6.5rem;
-}
+} */
 
 .card {
     background-color: #ffffff;
     border-radius: 10px;
-    max-width: 300px;
+    flex-basis: 300px;
     text-align: center;
     padding: 5.5rem 3rem 4.5rem;
     min-height: 310px;
@@ -425,7 +426,7 @@ body {
     perspective: 1000px;
 }
 
-.card img {
+.card__image {
     display: block;
     justify-self: start;
     margin-bottom: auto;
@@ -988,7 +989,7 @@ ymaps {
     .nav {
         flex-flow: row wrap;
         justify-content: space-around;
-        max-width: 70rem;
+        /* max-width: 70rem; */
     }
     .nav__menu {
         order: 4;
@@ -1016,6 +1017,10 @@ ymaps {
         margin-bottom: -5.7rem;
     }
 
+    .jumbotron__text--header p {
+        margin-bottom: -3.5rem;
+    }
+
     .jumbotron__text--content {
         max-width: 535px;
         padding: 3.4rem 5rem;
@@ -1024,7 +1029,15 @@ ymaps {
     }
 
     .jumbotron__text--content p {
-        /* margin-bottom: 0; */
+        margin-bottom: -20px;
+    }
+
+    .card-container {
+        padding: 8.5rem 0;
+    }
+
+    .card-container .card:nth-child(-n+2) {
+        margin-bottom: 3.5rem;
     }
 
 }
@@ -1046,7 +1059,7 @@ ymaps {
         right: 0;
         height: 6rem;
         background-color: #ffffff;
-        max-width: 70rem;
+        /* max-width: 70rem; */
         color: #000000;
         padding-top: 0;
     }
@@ -1156,6 +1169,46 @@ ymaps {
         padding-bottom: 30vh;
     }
 
+    .nav__item--close {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        padding: 2rem;
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .nav__item--close a {
+        width: 1rem;
+        height: 1rem;
+    }    
+
+    .nav__item--close a:before {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 4px;
+        background-color: #000;
+        margin-bottom: 2rem;
+        position: absolute;
+        transform: rotate(45deg);
+        cursor: pointer;        
+        transform-origin: center;
+    }
+
+    .nav__item--close a:after {
+        content: '';
+        display: block;
+        width: 2rem;
+        height: 4px;
+        background-color: #000;
+        position: absolute;
+        transform: rotate(-45deg);          
+        cursor: pointer;
+        transform-origin: center;        
+    }    
+
     .nav__menu {
         display: flex;
         flex-flow: column nowrap;
@@ -1184,6 +1237,60 @@ ymaps {
     .jumbotron__text--header p {
         margin-bottom: 0;
         font-size: 1.9rem;
+    }
+
+    .jumbotron__text--content {
+        display: flex;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        justify-content: center;
+    }
+
+    .jumbotron__text--content p {
+        font-size: 1.3rem;
+    }
+
+    .jumbotron__icon-container {
+        margin: 1rem 0;
+    }
+
+    .jumbotron__text--content input {
+        padding: 1.5rem 2rem;
+    }
+
+    .card-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-basis: 290px;
+        padding: 1.5rem .5rem 1.5rem 2rem;
+        align-items: center;
+        justify-content: center;
+        min-height: inherit;
+        text-align: left;        
+    }
+
+    .card__image {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+    }
+
+    .card__image img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .card__text h2 {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .card__text p {
+        font-size: 1.3rem;
     }
 
 }
