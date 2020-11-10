@@ -648,8 +648,12 @@ body {
     padding: 2.2rem 4rem;
 }
 
-.your-choice .container{
+.your-choice {
     padding: 11.5rem 0 11.5rem;
+}
+
+.your-choice__text {
+    flex-basis: 380px;
 }
 
 .your-choice .card-container {
@@ -1040,6 +1044,15 @@ ymaps {
         margin-bottom: 3.5rem;
     }
 
+    .your-choice {
+        padding: 5.5rem 0 5.5rem;
+    }
+
+    .your-choice__text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -1073,7 +1086,7 @@ ymaps {
     }
 
     .nav__logo--link {
-        margin: ;
+        /* margin: ; */
     }
 
     .nav a {
