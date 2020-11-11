@@ -654,6 +654,7 @@ body {
 
 .your-choice__text {
     flex-basis: 380px;
+
 }
 
 .your-choice .card-container {
@@ -1037,11 +1038,81 @@ ymaps {
     }
 
     .card-container {
-        padding: 8.5rem 0;
+        padding: 8.5rem 0 0;
     }
 
     .card-container .card:nth-child(-n+2) {
         margin-bottom: 3.5rem;
+    }
+
+    .gallery__header {
+        flex-flow: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .gallery__type {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .gallery__header h2 {
+        margin-bottom: 1rem;
+    }
+
+    .gallery__header p {
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+
+    .gallery__footer p {
+        padding-left: 6rem;
+        padding-right: 3rem;
+    }
+
+    .looking-for {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .looking-for p {
+        font-size: 2.1rem;
+        margin-right: 0;
+        text-align: center;
+        max-width: unset;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .looking-for h2 {
+        font-size: 3.7rem;
+    }
+
+    .looking-for img {
+        width: 40rem;
+        height: 19rem;
+        flex-basis: unset;
+        display: block;
+        margin: auto;
+    }
+
+    .looking-for__image__container p{
+        margin-bottom: 9rem;
+    }
+
+    .looking-for__image__container {
+        margin-bottom: 4rem;
+    }
+
+    .looking-for__input__wrapper {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .looking-for .button {
+        padding-top: 1.8rem;
+        padding-bottom: 1.7rem;
     }
 
     .your-choice {
@@ -1051,6 +1122,12 @@ ymaps {
     .your-choice__text {
         flex-basis: 100%;
         text-align: center;
+        margin-bottom: 5.5rem;
+    }
+
+    .your-choice img {
+        width: 155px;
+        height: 155px;
     }
 
 }
@@ -1305,6 +1382,88 @@ ymaps {
     .card__text p {
         font-size: 1.3rem;
     }
+
+    .gallery {
+        padding-bottom: 4rem;
+    }
+
+    .gallery__content {
+        padding-bottom: 2rem;
+    }
+
+    .gallery__items {
+        flex-basis: 25rem;
+    }
+
+    .gallery__item--info .item-type {
+        font-size: 1.2rem;
+    }
+
+    .gallery__item--info price {
+        font-size: 1.5rem;
+    }
+
+    .gallery__item--img {
+        width: 25rem;
+        height: 25rem;
+        max-width: auto;
+    }
+
+    .gallery__item--img img {
+        width: 100%;
+    }
+
+    .gallery__item--content {
+        width: 250px;
+    }
+
+    .gallery__item--ordering {
+        width: 250px;
+    }
+
+    .gallery__item--ordering .button {
+        padding: 0.8rem 0;
+        font-size: 1.6rem;
+    }
+
+    .gallery__footer {
+        flex-direction: column;
+    }
+
+    .gallery__footer p{
+        font-size: 1.3rem;
+        flex-basis: auto;
+        padding: 0 1.6rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .gallery__footer .button {
+        padding: 1.2rem 4rem;
+    }
+
+    .looking-for {
+        padding: 5rem 0 5rem;
+    }
+
+    .looking-for h2 {
+        font-size: 2rem;
+    }
+
+    .looking-for__image__container p{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .looking-for__image__container img {
+        width: 25rem;
+        height: 12rem;
+    }
+
+    .looking-for .button {
+        padding-top: 1.8rem;
+        padding-bottom: 1.7rem;
+    }    
 
 }
 
