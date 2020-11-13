@@ -493,6 +493,22 @@ body {
     margin-right: auto;
 }
 
+.gallery__header h2 {
+    font-size: 2.4rem;
+}
+
+.gallery__header p {
+    font-size: 1.6rem;
+}
+
+.gallery__content .gallery__items:first-child {
+    padding-top: 0;
+}
+
+.gallery__header .button {
+    font-size: 1.5rem;
+}
+
 .gallery__type li {
     display: inline-block;
 }
@@ -968,6 +984,10 @@ body {
     margin-left: 2rem;
 }
 
+.footer .address {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
 
 .copyright {
     padding: 7.4rem 0 1rem;
@@ -1735,6 +1755,24 @@ ymaps {
     .contact-us form {
         padding: 2rem;
         max-width: 29rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .container{
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .icon-container {
+        margin: unset;
+    }
+
+    .footer .address {
+        font-size: 1.5rem;
     }
 }
 
