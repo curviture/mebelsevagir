@@ -2,4 +2,5 @@
 TODO fixing adress poping off in mobile screen
 TODO fixing navbar on medium screen
 TODO fixing jumbotron
-TODO showroom
+TODO finish manifacturer
+TODO finish 
