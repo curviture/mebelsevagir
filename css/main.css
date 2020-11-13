@@ -1237,6 +1237,33 @@ ymaps {
         height: 5rem;
     }
 
+    .contact-us {
+        text-align: center;
+    }
+
+    .contact-us .container {
+        flex-flow: column;
+    }
+
+    .contact-us .text-content {
+        margin-bottom: 2rem;
+    }
+
+    .contact-us p {
+        max-width: 550px;
+    }
+
+    .contact-us form {
+        width: 36rem;
+        max-width: unset;
+    }
+    
+    .contact-us form .button {
+        width: 100%;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+
 }
 
 @media (max-width: 770px) {
@@ -1696,7 +1723,19 @@ ymaps {
         font-size: 2.4rem;
     }
 
-    
+    .contact-us h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact-us .text-content p {
+        font-size: 1.9rem;
+        max-width: 26rem;
+    }    
+
+    .contact-us form {
+        padding: 2rem;
+        max-width: 29rem;
+    }
 }
 
 
