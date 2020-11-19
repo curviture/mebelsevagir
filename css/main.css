@@ -15,8 +15,6 @@ ul {
 /*base*/
 
 html {
-    width: 100%;
-    min-height: 100%;
     font-size: 62.5%;
 }
 
@@ -25,7 +23,6 @@ html {
 }
 
 body {
-    height: 100%;
     font-family: "DIN Pro";
     font-size: 2.4rem;
     box-sizing: border-box;
@@ -82,10 +79,6 @@ a {
     text-decoration: none;
 }
 
-
-h2 {
-    font-size: 5.3rem;
-}
 
 h2.medium {
     font-size: 4.8rem;
@@ -172,7 +165,6 @@ body {
     width: 100%;
 }
 
-.hamburger,
 .nav__item--close {
     display: none;
 }
@@ -238,7 +230,7 @@ body {
 }
 
 .nav__aside p:not(:last-child) {
-    padding-right: 2.8rem;
+    margin-right: 2.8rem;
 }
 
 .nav__aside a {
@@ -1023,15 +1015,30 @@ ymaps {
         display: none!important;
     }
 
+    .md-hidden {
+        display: none!important;
+    }
+
     .md-col-2 {
         flex-basis: 50%;
     }
 
+    
+    .md-col-1 {
+        flex-basis: 100%;
+    }
+    
+    .jumbotron {
+        text-align: center;
+    }
+    
     .nav {
         flex-flow: row wrap;
         justify-content: space-around;
+        align-items: center;
         /* max-width: 70rem; */
     }
+
     .nav__menu {
         order: 4;
         flex-basis: 100%;
@@ -1040,12 +1047,12 @@ ymaps {
         justify-self: center;
     }
 
-    .md-col-1 {
-        flex-basis: 100%;
+    .nav__aside {
+        margin-left: auto;
     }
 
-    .jumbotron {
-        text-align: center;
+    .nav__aside p {
+        font-size: 1.6rem;
     }
 
     .jumbotron .container {
@@ -1055,12 +1062,12 @@ ymaps {
     }
 
     .jumbotron__text--header {
-        margin-bottom: -5.7rem;
+        margin-bottom: -10.8rem;
     }
 
-    .jumbotron__text--header p {
+    /* .jumbotron__text--header p {
         margin-bottom: -3.5rem;
-    }
+    } */
 
     .jumbotron__text--content {
         max-width: 535px;
@@ -1070,7 +1077,7 @@ ymaps {
     }
 
     .jumbotron__text--content p {
-        margin-bottom: -20px;
+        /* margin-bottom: -20px; */
     }
 
     .card-container {
@@ -1292,6 +1299,10 @@ ymaps {
         max-width: 30rem;
     }
 
+    .md-hidden {
+        display: unset!important;
+    }
+
     body {
         font-size: 1.3rem;
     }
@@ -1328,7 +1339,7 @@ ymaps {
         color: #000000;
     }
 
-    .hamburger .line {
+    .nav__hamburger .line {
         display: block;
         height: 5px;
         width: 2.5rem;
