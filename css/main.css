@@ -1487,6 +1487,13 @@ ymaps {
         z-index: -1;        
     } */
 
+    .jumbotron .container {
+        justify-content: space-evenly;
+    }
+
+    .jumbotron__text--header {
+        margin-bottom: 0;
+    }    
     
     .jumbotron h1 {
         font-size: 2.4rem;
@@ -1754,12 +1761,17 @@ ymaps {
         font-size: 2.4rem;
     }
 
+    .contact-us  {
+        padding-top: 2rem;
+    }
+
     .contact-us h2 {
         font-size: 2.4rem;
+        margin-bottom: 1rem;
     }
 
     .contact-us .text-content p {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
         max-width: 26rem;
     }    
 
