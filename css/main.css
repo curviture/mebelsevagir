@@ -12,6 +12,10 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*base*/
 
 html {
@@ -31,6 +35,12 @@ body {
 
 /*grid*/
 
+.container {
+    display: flex;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
 .col-2 {
     flex-basis: 50%;
 }
@@ -44,11 +54,6 @@ body {
 }
 
 
-.container {
-    display: flex;
-    max-width: 1120px;
-    margin: 0 auto;
-}
 
 /*inputs and buttons*/
 
@@ -61,27 +66,20 @@ body {
     transition: all 0.15;
     border: 1px solid #000;
     cursor: pointer;
+    outline: none;
 }
 
 /*typography*/
 
-h1,
-h2,
-h3 {
-    font-family: "DIN Pro Black";
+.heading {
+    font-family: "DIN Pro Black";    
 }
 
-h1,
-h2 {
+.heading--primary {
     font-size: 5.3rem;
 }
 
-a {
-    text-decoration: none;
-}
-
-
-h2.medium {
+.heading--secondary {
     font-size: 4.8rem;
 }
 
@@ -93,41 +91,44 @@ p {
     color: #ffffff;
 }
 
-.button-transparent {
+.button--ghost {
     background-color: transparent;
 }
 
-.button-transparent:hover {
+.button--ghost:hover {
     background-color: #000;
     color: #000;
 }
 
-.button-attention {
+.button--attention {
     background-color: #EE1919;
     border-color: #EE1919;
     color: #ffffff;
 }
 
-.button-dark {
+.button--dark {
     background-color: #000000;
 }
 
-.lg-hidden {
+.hidden--lg {
     display: none!important;
+}
+
+.visible--lg {
+    display: unset!important;
 }
 
 
 body {
-    width: 100%;
     font-size: 1.6rem;
     position: relative;
     background-color: #eee;
-    font-family: 'DIN Pro';
+    font-family: 'DIN Pro', serif;
     overflow-x: hidden;
     color: #000000;
 }
 
-.container-fluid-fx-bg {
+.container--fluid-fx-bg {
     background-attachment: fixed;
 }
 
@@ -136,7 +137,7 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.main {
     background: url('../img/bg-1.jpg') 50% 0;
     background-size: cover;
     height: 97.5vh;
@@ -145,73 +146,52 @@ body {
     z-index: 2;
 }
 
-.header h1 span {
+.main h1 span {
     font-size: 3.2rem;
     font-family: "DIN Pro";
 }
 
-.nav {
+.header {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
     padding-top: 3rem;
     color: #ffffff;
-    max-width: 1120px;
-    margin: 0 auto;
     font-size: 1.7rem;
-    width: 100%;
     z-index: 3;
 }
 
-.nav__item--close {
-    display: none;
+.header__inner {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
 }
 
-.nav a {
+.menu--fixed {
+    display: none!important;
+}
+
+.menu {
+    flex-grow: 2;
+    margin-left: 4.8rem;
+    padding-top: 1.6rem;
+    display: flex;
+    flex-flow: row nowrap;    
+}
+
+.menu__link {
     /* font-size: 1.7rem; */
     color: #ffffff;
     font-size: 1.7rem;
     display: block;
 }
 
-.nav__menu {
-    flex-grow: 2;
-    margin-left: 4.8rem;
-    padding-top: 1.6rem;
+.menu__item {
+
 }
 
-.nav__menu li {
-    display: inline-block;
-}
-
-.fancy_underline {
-    position: relative;
-}
-
-.fancy_underline:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    top: -10px;
-    left: 0;
-    /* background-color: rgba(255,255,255,0); */
-    background-color: currentColor;
-    border: none;
-    transform: scaleX(0);
-    transition: all 0.3s .05s;
-}
-
-.fancy_underline:hover:after {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-.nav__item a{
+.menu__link {
     padding: .5rem 1.75rem 0.25rem;
     text-decoration: none;
     color: #ffffff;
@@ -220,18 +200,18 @@ body {
     font-family: 'DIN Pro';
 }
 
-.nav__aside {
+.header__info {
     display: flex;
     flex-flow: row nowrap;
     text-align: right;
 
 }
 
-.nav__aside p {
+.header__text {
     font-size: 1.9rem;
 }
 
-.nav__aside p:not(:last-child) {
+.header__text p:not(:last-child) {
     margin-right: 2.8rem;
 }
 
@@ -254,10 +234,6 @@ body {
 .nav__button:hover {
     background-color: #000000;
     color: #ffffff;
-}
-
-.nav__socials {
-    display: none;
 }
 
 .jumbotron {
@@ -344,27 +320,6 @@ body {
     display: inline-block;
     position: relative;
     text-align: center; */
-}
-
-.blink {
-    overflow: hidden;
-    display: inline-block;
-    position: relative;
-    text-align: center;
-
-}
-
-.blink:after {
-    content: '';
-    transform: rotate(45deg);
-    display: block;
-    position: absolute;
-    background-color: rgba(255,255,255, 0.5);
-    height: 200px;
-    width: 40px;
-    left: -40px;
-    top: -50px;
-    animation: slideLeft 2s 0s infinite
 }
 
 .jumbotron__input--container:after {
@@ -1009,15 +964,15 @@ ymaps {
         padding: 0 .5rem;
     }
 
-    .lg-hidden {
+    .hidden--lg {
         display: unset!important;
     }
 
-    .hidden-lg {
+    .visible--lg {
         display: none!important;
     }
 
-    .md-hidden {
+    .hidden--md {
         display: none!important;
     }
 
@@ -1301,8 +1256,12 @@ ymaps {
         max-width: 30rem;
     }
 
-    .md-hidden {
-        display: unset!important;
+    .hidden--md {
+        display: none !important;
+    }
+
+    .visible--md {
+        display: unset !important;
     }
 
     body {
@@ -1802,7 +1761,7 @@ ymaps {
 }
 
 
-#menu {
+/* #menu {
     position: fixed;
     z-index: 1;
     background-color: #fff;
@@ -1868,6 +1827,53 @@ ymaps {
 #menu .social a img{
     width: 3.5rem;
     height: 3.5rem;
+} */
+
+
+/*animations and transitional classes*/
+
+.animated-underline {
+    position: relative;
+}
+
+.animated-underline:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: -10px;
+    left: 0;
+    /* background-color: rgba(255,255,255,0); */
+    background-color: currentColor;
+    border: none;
+    transform: scaleX(0);
+    transition: all 0.3s .05s;
+}
+
+.animated-underline:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.blink {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+
+}
+
+.blink:after {
+    content: '';
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    background-color: rgba(255,255,255, 0.5);
+    height: 200px;
+    width: 40px;
+    left: -40px;
+    top: -50px;
+    animation: slideLeft 2s 0s infinite
 }
 
 
