@@ -68,6 +68,7 @@ body {
     cursor: pointer;
     outline: none;
     border: none;
+    box-shadow: none;
 }
 
 /*typography*/
@@ -76,12 +77,16 @@ body {
     font-family: "DIN Pro Black";    
 }
 
-.heading--primary {
+.heading--larger {
     font-size: 5.3rem;
 }
 
-.heading--secondary {
+.heading--large {
     font-size: 4.8rem;
+}
+
+.heading--small {
+    font-size: 3.2rem;
 }
 
 p {
@@ -985,9 +990,23 @@ ymaps {
     background-color: transparent;
 }
 
+.modal__header {
+    margin-bottom: 2rem;
+}
+
 .modal__content {
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+    border-radius: 1rem;
+}
+
+.modal__title span {
+    font-size: 1.9rem;
+    font-family: "Din Pro Light";
 }
 
 .form  {
@@ -996,7 +1015,12 @@ ymaps {
 
 .form__input-wrapper {
     padding: 0 6rem;
+    margin-bottom: 1.3rem;
+}
 
+.form__checkbox-text {
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 .input {
@@ -1006,7 +1030,14 @@ ymaps {
     padding: 2rem;
     text-align: center;
     vertical-align: middle;
+    border: 1px solid #333;
 }
+
+.input:focus {
+    outline: none;
+}
+
+
 
 
 
@@ -1910,7 +1941,7 @@ ymaps {
 
 .blink {
     overflow: hidden;
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
     text-align: center;
 

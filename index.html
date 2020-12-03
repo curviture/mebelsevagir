@@ -500,7 +500,7 @@
     <div class="modal" tabindex="-1" id="js-call-navbar"  style="display:none;">
         <div class="modal__content">
             <div class="modal__header">
-              <h5 class="modal-title">Оставьте заявку <br> <span>чтобы мы перезвонили вам</span></h5>
+              <h5 class="modal__title heading heading--small">Оставьте заявку <br> <span>чтобы мы перезвонили вам</span></h5>
             </div>
             <div class="modal__body">
                 <form class="form">
@@ -510,8 +510,14 @@
                     <div class="form__input-wrapper">
                         <input class="input" type="password" required placeholder="Введите свой телефон">
                     </div>
-                    <div class="form__input-wrapper form__input-wrapper--button">
-                        <input class="input" type="button" value="Перезвоните мне">
+                    <div class="form__input-wrapper form__input-wrapper--button blink">
+                        <input class="input button button--attention" type="button" value="Перезвоните мне">
+                    </div>
+                    <div class="form__input-wrapper">
+                        <input type="checkbox" name="check" id="check">
+                        <label for="check" class="form__checkbox-text">                        
+                            Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
+                        </label>                    
                     </div>
                 </form>
             </div>
