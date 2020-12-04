@@ -18,7 +18,7 @@
 <body>
     <div class='header'>
         <div class="header__inner container">
-            <a class="hidden--md nav__hamburger" id="menu-open">
+            <a class="hidden--md menu__trigger" id="js-header-trigger">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -28,38 +28,39 @@
                     <img class="logo__icon" src="img/logo.png" alt="">
                 </a>
             </div>
-            <ul class="menu menu--header" id="menu">
-                <li class="menu__item menu__item--closer hidden--lg">
-                    <a href="" class="menu__link menu__link--closer" id="js-menu__link--closer">
-                        <span></span>
+            <ul class="menu menu--header" id="js-header-menu">
+                <li class="menu__item menu__item--closer hidden--md">
+                    <a href="" class="menu__link menu__link--closer" id="js-menu-link-closer">
+                        &#x2716;
                     </a>
                 </li>
                 <li class="menu__item"><a class="menu__link animated-underline" href="#">Кровати</a></li>
-                <li class="menu__item"><a class="menu__link animated-underline" href="#">Диваны</a></li>
+                <li class="menu__item hidden--md visible--lg"><a class="menu__link animated-underline" href="#">Диваны</a></li>
                 <li class="menu__item"><a class="menu__link animated-underline" href="#">На заказ</a></li>
                 <li class="menu__item"><a class="menu__link animated-underline" href="#">Шоурум</a></li>
             </ul>
-            <div class="header__socials hidden--lg">
+            <div class="header__socials hidden--md">
                 <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/insta1.png" alt=""></a>
                 <a class="header__link header__link--social" href=""><img class="header__icon header__icon--socials" src="img/whatsapp.jpg" alt=""></a>
             </div>
             <div class="header__info">
-                <p class="header__text header__text--small">
+                <p class="header__text header__text--small js-move" data-moveto="address-container" data-screen="760">
                     г. Москва, ул. Тимирязевская, д.2/3
                     <br>
                     (ТЦ "Парк 11", 3 этаж)
                 </p>
                 <p class="header__text">
                     <a  class="header__link header__link--large animated-underline" href="http://">+7 (495) 142-93-80</a>
-                    <input id="call-from-navbar" class="button button--tiny" type="button" value="Заказать звонок" data-toggle="modal" data-target="#js-call-navbar">
+                    <input id="call-from-navbar" class="button button--tiny button--header" type="button" value="Заказать звонок" data-toggle="modal" data-target="#js-call-navbar">
                 </p>
             </div>
         </div>
     </div>
-    <div class="main bg-fixed text-white" data-parallax="scroll" data-image-src="./img/bg-1.jpg">
-        <div class="container jumbotron__text--container">
-            <div class="jumbotron__text--header col-2 md-col-1">
-                <h1>
+    <div class="main text-white" data-parallax="scroll" data-image-src="./img/bg-1.jpg">
+        <div class="container main__inner">
+            <div id="address-container"></div>
+            <div class="main__content col-2 md-col-1">
+                <h1 class="heading heading--larger main__heading">
                     Кровати на заказ
                     <br>
                     по дизайн проектам
@@ -67,21 +68,21 @@
                 </h1>
                 <p>С мягкой обивкой от производителя</p>
             </div>
-            <div class="jumbotron__text--content col-2 md-col-1">
+            <div class="main__content main__content--bordered col-2 md-col-1">
                 <p>
                     Подберем кровать под ваш дизайн, либо изготовим по вашему макету или фото и привезем в срок от 3-х дней
                 </p>
-                <div class="jumbotron__icon-container">
+                <div class="main__icon-container">
                     <img src="img/bed-icon-small.png" alt="">
                 </div>
-                <div class="jumbotron__input--container blink">
+                <div class="main__input--container blink">
                     <input type="button" class="jumbotron__call-to-action" value="Подобрать и рассчитать" />
                 </div>
             </div>
-            <a href="#gallery" class="jumbotron__link--slidedown">&darr;</a>
+            <a href="#gallery" class="button--slidedown">&darr;</a>
         </div>
     </div>
-    <div class="container card-container"> 
+    <!-- <div class="container card-container"> 
         <div class="card md-col-3 col-3 col-sm-1">
             <div class="card__image">
                 <img src="img/peim1.png" alt="">
@@ -495,7 +496,7 @@
                 </p>
             </div>
         </nav>
-    </div>
+    </div> -->
     <!-- Modals -->
     <div class="modal" tabindex="-1" id="js-call-navbar"  style="display:none;">
         <div class="modal__content">
@@ -523,25 +524,6 @@
             </div>
         </div>
     </div>    
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
     <script src='js/index.js'></script>    
 </body>
 </html>

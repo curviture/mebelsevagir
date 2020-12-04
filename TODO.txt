@@ -1,6 +1,1 @@
-
-TODO fixing adress poping off in mobile screen
-TODO fixing navbar on medium screen
-TODO fixing jumbotron
-TODO finish manifacturer
-TODO finish 
+//TODO reacting to screen changes when clicking on link on muneo when screen size is less then 760
