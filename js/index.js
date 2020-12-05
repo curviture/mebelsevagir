@@ -7,7 +7,7 @@ $('#call-from-navbar').modaal({
 (function() {
     let width = screen.availWidth;
     let headerMenuLink = document.querySelectorAll('.menu--header .menu__link');
-    console.log(width)
+    console.log('moveto', width)
     if(width <= 760) {
         headerMenuLink.forEach(function(item) {
             item.classList.remove('animated-underline')
@@ -39,6 +39,7 @@ $('#call-from-navbar').modaal({
     console.log('hello kitt')
     console.log(items)
     items.forEach(function(item) {
+        console.log(item.dataset,+item.dataset.screen)
         if(screen.availWidth <= +item.dataset.screen) {
             let moveto = document.getElementById(item.dataset.moveto);
             let clone = item.cloneNode(true);

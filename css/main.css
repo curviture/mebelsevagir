@@ -31,6 +31,7 @@ body {
     font-size: 2.4rem;
     box-sizing: border-box;
     position: relative;
+    min-height: 200vh;
 }
 
 /*grid*/
@@ -53,8 +54,6 @@ body {
     flex-basis: 25%;
 }
 
-
-
 /*inputs and buttons*/
 
 .button {
@@ -68,14 +67,14 @@ body {
     cursor: pointer;
     outline: none;
     border: none;
-    box-shadow: none;
+    padding: 19px;
 }
 
 .button--slidedown {
     position: absolute;
     bottom: 0;
     left: 50%;
-    font-size: 4rem;
+    font-size: 2rem;
     color: #000000;
     border-radius: 50%;
     border-color: rgba(255,255,255,0.5);
@@ -89,37 +88,13 @@ body {
     transform: translateY(50%);
     box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
     z-index: 100;
-    animation: bubble 3s 3s infinite
+    animation: bubble 3s 3s infinite;
+    line-height: 5rem;
+    vertical-align: middle;
 }
 
 .button--slidedown:hover {
     animation: bubble 0s 0s, pulse-shadow 1s 1s infinite;
-}
-
-/*typography*/
-
-.heading {
-    font-family: "DIN Pro Black";    
-}
-
-.heading--larger {
-    font-size: 5.3rem;
-}
-
-.heading--large {
-    font-size: 4.8rem;
-}
-
-.heading--small {
-    font-size: 3.2rem;
-}
-
-p {
-    font-size: 2.4rem;
-}
-
-.text-white {
-    color: #ffffff;
 }
 
 .button--ghost {
@@ -150,6 +125,32 @@ p {
 
 .button--tiny:hover {
     background-color: #000000;
+    color: #ffffff;
+}
+
+/*typography*/
+
+.heading {
+    font-family: "DIN Pro Black";    
+}
+
+.heading--larger {
+    font-size: 5.3rem;
+}
+
+.heading--large {
+    font-size: 4.8rem;
+}
+
+.heading--small {
+    font-size: 3.2rem;
+}
+
+p {
+    font-size: 2.4rem;
+}
+
+.text-white {
     color: #ffffff;
 }
 
@@ -271,6 +272,7 @@ body {
     height: 97.5vh;
     position: relative;
     padding-top: 150px;
+    padding-bottom: 6.5rem;
     z-index: 2;
 }
 
@@ -284,18 +286,17 @@ body {
     color: #ffffff;
     height: 100%;
     width: 100%;
-    padding-bottom: 10rem;
 }
 
-.jumbotron h1 {
-    font-family: 'DIN Pro Black';
-    font-size: 5.3rem;
-    margin-bottom: 6rem;
+.main__heading {
+    margin-bottom: 6.;
 }
 
-.jumbotron__text--header p {
+.main__heading span {
     font-size: 3.2rem;
-    font-family: "DIN Pro";
+    font-family: "DIN Pro Light";
+    display: block;
+    margin-top: 6.5rem;
 }
 
 .main__content--bordered {
@@ -307,38 +308,19 @@ body {
     text-align: justify;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 3.2rem;
 }
 
-.jumbotron__text--content p {
+.main__text {
     font-size: 1.7rem;
     margin-bottom: 2rem;
     flex-basis: 100%;
 }
 
-.jumbotron__icon-container{
+.main__icon-container{
     width: 177px;
     height: 83px;
     display: inline-block;
-}
-
-.jumbotron__input--container {
-    /* overflow: hidden;
-    display: inline-block;
-    position: relative;
-    text-align: center; */
-}
-
-.jumbotron__input--container:after {
-    /* content: '';
-    transform: rotate(45deg);
-    display: block;
-    position: absolute;
-    background-color: rgba(255,255,255, 0.5);
-    height: 200px;
-    width: 40px;
-    left: -40px;
-    top: -50px;
-    animation: slideLeft 2s 0s infinite */
 }
 
 .jumbotron__text--content input {
@@ -1045,15 +1027,8 @@ ymaps {
         flex-basis: 100%;
     }
     
-    .jumbotron {
+    .main {
         text-align: center;
-    }
-    
-    .nav {
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        /* max-width: 70rem; */
     }
 
     .menu {
@@ -1082,21 +1057,17 @@ ymaps {
         font-size: 1.7rem;
     }
 
-    .main .container {
+    .main__inner {
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
     }
 
-    .jumbotron__text--header {
-        margin-bottom: -10.8rem;
+    .main__content {
+        /* margin-bottom: -10.8rem; */
     }
 
-    /* .jumbotron__text--header p {
-        margin-bottom: -3.5rem;
-    } */
-
-    .jumbotron__text--content {
+    .main__content--bordered {
         max-width: 535px;
         padding: 3.4rem 5rem;
         margin-bottom: auto;
@@ -1322,6 +1293,17 @@ ymaps {
 
 @media (max-width: 770px) {
 
+    .button {
+        padding: 15px 17px;
+    }
+
+    .button--slidedown {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
+    }
+
     .hidden--md {
         display: unset!important;
     }
@@ -1495,60 +1477,51 @@ ymaps {
         width: 2rem;
         height:2rem;
         font-size: 4rem;
-    }    
-
-    /* .nav__menu.open::after {
-        content: '';
-        position: absolute;
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        background-color: rgba(255,255,255,0.9);
-        z-index: -1;        
-    } */
-
-    .jumbotron .container {
-        justify-content: space-evenly;
     }
 
-    .jumbotron__text--header {
+    .main__inner {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__content {
         margin-bottom: 0;
     }    
     
-    .jumbotron h1 {
+    .main__heading {
         font-size: 2.4rem;
-        margin-bottom: 3rem;
     }
     
-    .jumbotron__text--header p {
-        margin-bottom: 0;
+    .main__heading span {
         font-size: 1.9rem;
+        margin: unset;
+        margin-top: 2rem;
     }
 
-    .jumbotron__text--content {
+    .main__content--bordered {
         display: flex;
         text-align: center;
         padding: 2rem 1.5rem;
         justify-content: center;
     }
 
-    .jumbotron__text--content p {
+    .main__text {
         font-size: 1.3rem;
     }
 
-    .jumbotron__icon-container {
+    .main__icon-container {
         margin: 1rem 0;
     }
-
-    .jumbotron__text--content input {
-        padding: 1.5rem 2rem;
+    
+    .main__icon-container img {
+        width: 15rem;
+        height: 7rem;
     }
 
     .card-container {
         align-items: center;
         justify-content: center;
+        padding: 4rem 0;
     }
 
     .card {
@@ -1962,7 +1935,7 @@ ymaps {
         left: -80px;        
     }
     50% {
-        left: 350px
+        left: 280px
     }
 
     100% {
