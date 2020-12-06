@@ -128,6 +128,10 @@ body {
     color: #ffffff;
 }
 
+.button--bordered {
+    border: 1px solid #000;
+}
+
 /*typography*/
 
 .heading {
@@ -399,8 +403,10 @@ body {
 
 .gallery__header {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.6rem;    
 }
 
 .gallery__header .button {
@@ -411,43 +417,41 @@ body {
     border: transparent;
 }
 
-.gallery__header .button.active {
+.button--gallery.active {
     color: #ff1100;
     border: 1px solid #A5A5A5;
 }
 
-.gallery__header h2 {
-    font-size: 5.2rem;
-    font-family: "DIN Pro Black";
-    margin-bottom: 2.6rem;
-    flex-basis: 100%;
+.heading--gallery {
+
+    /* flex-basis: 100%; */
+    padding-left: 3rem;
 }
 
-.gallery__header > p {
+.heading--gallery span {
     font-size: 3.2rem;
     font-family: "DIN Pro";
-    margin-bottom: 8.5rem;
-    margin-right: auto;
+    font-weight: normal;
 }
 
-.gallery__header h2 {
+.gallery__item-name {
     font-size: 2.4rem;
 }
 
-.gallery__header p {
-    font-size: 1.6rem;
+
+.gallery__type {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-.gallery__content .gallery__items:first-child {
-    padding-top: 0;
+.button--gallery {
+    font-size: 20px;
+    font-family: 'Din Pro Bold';
 }
 
-.gallery__header .button {
-    font-size: 1.5rem;
-}
-
-.gallery__type li {
-    display: inline-block;
+.gallery__list {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .gallery__content {
@@ -458,7 +462,7 @@ body {
     padding-bottom: 12rem;
 }
 
-.gallery__items {
+.gallery__item {
     flex-basis: 33%;
     outline-width: 0 2px 0 0;
     display: flex;
@@ -469,37 +473,41 @@ body {
     border-top: none;
 }
 
-.gallery__content > .gallery__items:nth-child(3n) {
+.gallery__list .gallery__item:first-child {
+    /* padding-top: 0; */
+}
+
+.gallery__list > .gallery__item:nth-child(3n) {
     border-right: none;
     border-left: none;
 }
 
-.gallery__content > .gallery__items:nth-child(3n + 1) {
+.gallery__list > .gallery__item:nth-child(3n + 1) {
     border-right: none;
     border-left: none;
 }
 
-.gallery__content > .gallery__items:nth-child(-n + 3) {
+.gallery__list > .gallery__item:nth-child(-n + 3) {
     border-top: none;
 }
 
-.gallery__content > .gallery__items:nth-last-child(-n + 3) {
+.gallery__list > .gallery__item:nth-last-child(-n + 3) {
     border-bottom: none;
 }
 
 
-.item-type {
+.gallery__item-type {
     font-family: "DIN Pro Light";
     font-size: 1.7rem;
 
 }
 
-.item-name {
+.gallery__item-name {
     font-size: "DIN Pro Black";
     font-size: 2rem;
 }
 
-.price {
+.gallery__item-price {
     font-size: 'DIN Pro Medium';
     font-size: 1.7rem;
 }
@@ -510,33 +518,39 @@ body {
 }
 
 
-.gallery__item--img {
+.gallery__item-img {
     max-width: 300px;
     height: auto;
 }
 
-.gallery__item--img img {
+.gallery__item-img img {
     max-width: 300px;
 }
 
-.gallery__item--content {
+.gallery__item-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.gallery__item-content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 300px;
+    margin-bottom: 1rem;
 }
 
-.gallery__item--thumbs a{
+.gallery__item-thumbs a{
     display: inline-block;
 }
 
-.gallery__item--thumbs img{
+.gallery__item-thumbs img{
     display: inline-block;
     width: 50px;
     height: 50px;
 }
 
-.gallery__item--ordering {
+.gallery__item-ordering {
     display: flex;
     flex-flow: row nowrap;
     width: 300px;
@@ -544,7 +558,7 @@ body {
     align-items: stretch;
 }
 
-.gallery__item--ordering input{
+.gallery__item-ordering input{
     flex-basis: 48%;
     padding: 1.4rem 0 1.4rem;
 }
@@ -1344,10 +1358,6 @@ ymaps {
         padding: 0;
     }
 
-    .nav__logo--link {
-        /* margin: ; */
-    }
-
     .menu__link,
     .header__link {
         color: #000000;
@@ -1562,37 +1572,37 @@ ymaps {
         padding-bottom: 2rem;
     }
 
-    .gallery__items {
+    .gallery__item {
         flex-basis: 25rem;
     }
 
-    .gallery__item--info .item-type {
+    .gallery__item-type {
         font-size: 1.2rem;
     }
 
-    .gallery__item--info price {
+    .gallery__item-info price {
         font-size: 1.5rem;
     }
 
-    .gallery__item--img {
+    .gallery__item-img {
         width: 25rem;
         height: 25rem;
         max-width: auto;
     }
 
-    .gallery__item--img img {
+    .gallery__item-img img {
         width: 100%;
     }
 
-    .gallery__item--content {
+    .gallery__item-content {
         width: 250px;
     }
 
-    .gallery__item--ordering {
+    .gallery__item-ordering {
         width: 250px;
     }
 
-    .gallery__item--ordering .button {
+    .gallery__item-ordering .button {
         padding: 0.8rem 0;
         font-size: 1.6rem;
     }
