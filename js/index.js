@@ -3,6 +3,10 @@ $('#call-from-navbar').modaal({
     content_source: '#js-call-navbar'
 });
 
+$('.gallery__item-thumbs a').modaal({
+    type: 'image'
+});
+
 //moving items in case of small screen
 (function() {
     let width = screen.availWidth;

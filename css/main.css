@@ -568,6 +568,7 @@ body {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    padding-top: 8rem;
 }
 
 .gallery__footer p {
@@ -584,7 +585,7 @@ body {
 
 .looking-for {
     padding: 9.2rem 0 10rem;
-    background: url(../img/bg-2.jpg);
+    /* background: url(../img/bg-2.jpg); */
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
@@ -648,7 +649,7 @@ body {
 }
 
 .matras {
-    background-image: url(../img/bg-3.jpg);
+    /* background-image: url(../img/bg-3.jpg); */
     background-attachment: fixed;
     padding: 10rem 0 9rem;
     color: #ffffff;
@@ -822,7 +823,7 @@ body {
 }
 
 .contact-us {
-    background-image: url(../img/bg-7.jpg);
+    /* background-image: url(../img/bg-7.jpg); */
     background-attachment: fixed;
     padding: 7rem 0 6.5rem;
     color: #ffffff;
@@ -1104,6 +1105,7 @@ ymaps {
         flex-flow: column;
         justify-items: center;
         align-items: center;
+        text-align: center;
     }
 
     .gallery__type {
@@ -1111,14 +1113,29 @@ ymaps {
         margin-bottom: 2rem;
     }
 
-    .gallery__header h2 {
+    .heading--gallery {
         margin-bottom: 1rem;
     }
 
-    .gallery__header p {
+    .heading--gallery  span {
         margin-right: 0;
         margin-bottom: 4rem;
     }
+
+    .gallery__list  {
+        justify-content: space-between;
+    }
+
+    .gallery__list .gallery__item:nth-child(odd) {
+        border-right: 2px solid #E1E1E1;
+    }
+
+    .gallery__list .gallery__item:nth-child(3n),
+    .gallery__list .gallery__item:nth-child(4n) {
+        border-bottom: 2px solid #E1E1E1;
+    }
+
+
 
     .gallery__footer p {
         padding-left: 6rem;
@@ -1568,8 +1585,14 @@ ymaps {
         padding-bottom: 4rem;
     }
 
-    .gallery__content {
+    .heading--gallery {
+        padding: unset;
+    }
+
+    .gallery__list {
         padding-bottom: 2rem;
+        justify-content: center;
+        align-items: center;
     }
 
     .gallery__item {
@@ -1580,7 +1603,7 @@ ymaps {
         font-size: 1.2rem;
     }
 
-    .gallery__item-info price {
+    .gallery__item-price {
         font-size: 1.5rem;
     }
 
