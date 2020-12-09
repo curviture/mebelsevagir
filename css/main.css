@@ -1876,12 +1876,42 @@ ymaps {
         justify-content: center;
     }
 
-    .footer .icon-container {
+    .footer__icon-container {
         margin: unset;
+        margin-bottom: 2rem;
+    }
+
+    .footer__icon-img {
+        width: 7.5rem;
+        height: 4rem;
+    }
+
+    .footer__info-section {
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__link {
+        font-size: 1.9rem;
+        vertical-align: middle;
+    }
+
+    .footer__link--icon img {
+        width: 2.8rem;
+        height: 2.8rem;
     }
 
     .footer .address {
         font-size: 1.5rem;
+    }
+
+    .footer__map-container {
+        margin: unset;
+    }
+
+    ymaps {
+        max-width: 30rem;
     }
 }
 
