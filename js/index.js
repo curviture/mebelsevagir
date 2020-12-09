@@ -7,6 +7,10 @@ $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });
 
+$('.js-showroom-modaal').modaal({
+    type: 'image'
+});
+
 //moving items in case of small screen
 (function() {
     let width = screen.availWidth;
@@ -48,6 +52,7 @@ $('.gallery__item-thumbs a').modaal({
             let moveto = document.getElementById(item.dataset.moveto);
             let clone = item.cloneNode(true);
             moveto.appendChild(clone)
+            console.log('clone and item', clone, item)
             item.classList.add('hidden')
         }
 

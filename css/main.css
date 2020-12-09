@@ -592,32 +592,43 @@ body {
     color: #ffffff;
 }
 
-.looking-for h2{
-    text-transform: capitalize;
-    font-size: 4.3rem;
-    font-family: "DIN Pro Black";
-    max-width: 72rem;
-    margin-bottom: 3.5rem;
-    line-height: 1;
+.looking-for__inner {
+    /* flex-flow: column nowrap; */
+    flex-wrap: wrap;
 }
 
-.looking-for p {
+.looking-for h2{
+    /* flex-basis: 100%; */
+    margin-bottom: 3.5rem;
+
+}
+
+.looking-for__image-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+
+.looking-for__text {
     font-size: 2.4rem;
     font-family: "DIN Pro Light";
     display: inline-block;
-    max-width: 48rem;
-    vertical-align: top;
     margin-right: 5.5rem;
 }
 
-.looking-for img {
+.looking-for__img {
     display: inline-block;
     width: 58rem;
     height: 28rem;
 }
 
-.looking-for input {
+.looking-for__cta {
     padding: 2.2rem 4rem;
+}
+
+.looking-for__input-wrapper {
+    margin-top: -1rem;
 }
 
 .your-choice {
@@ -690,29 +701,24 @@ body {
     padding: 10rem 0 9.3rem;  
 }
 
-.showroom h2 {
-    font-size: 4.8rem;
+.showroom__heading {
     margin-bottom: 4.3rem;
 }
 
-.showroom > .container {
+.showroom__inner {
     display: flex;
     flex-flow: row wrap;
 }
 
-.showroom > .container > div {
-    flex-basis: 50%;
-}
-
-.showroom .text-content {
+.showroom__text-content {
     padding-right: 1rem;
 }
 
-.showroom .address {
+.showroom__address {
     padding-top: 3.6rem;
 }
 
-.showroom .address img {
+.showroom__address-icon {
     float: left;
     border-radius: 5px;
     border: 1px solid #000;
@@ -720,32 +726,33 @@ body {
     margin-top: 5px;
 }
 
-.showroom .address p {
+.showroom__text {
     font-size: 1.9rem;
     font-family: "DIN Pro Light";
 }
 
-.showroom .img-content {
+.showroom__img-content {
     display: flex;
     flex-flow: row nowrap;
 }
 
-.showroom .img-content > a img {
+.showroom__img--large {
     width: 422px;
     height: 360px;
 }
 
-.showroom .img-content .thumbs img {
+.showroom__thumbs {
+    display: flex;
+    flex-flow: column;
+}
+
+.showroom__img--thumbs {
     width: 122px;
     height: 96px;
     margin-bottom: 8px;
     margin-left: 8px;
 }
 
-.showroom .img-content .thumbs {
-    display: flex;
-    flex-flow: column;
-}
 
 .manifacturer {
     background-image: url(../img/bg_4.jpg);
@@ -829,7 +836,7 @@ body {
     color: #ffffff;
 }
 
-.contact-us .container {
+.contact-us__inner {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -837,118 +844,135 @@ body {
     max-width: 96rem;
 }
 
-.contact-us .container > .text-content {
+.contact-us__text-content {
     flex-basis: 60%;;
 }
 
-.contact-us form {
+.contact-us__form-container {
+}
+
+.contact-us__form {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
     color: #000000;
     padding: 3.5rem 4rem 5.5rem;
+    max-width: 36rem;
+    border-radius: 1rem;
     text-align: center;
-    max-width: 31rem;
 }
 
-.contact-us form h2 {
+.contact-us__heading--form {
     font-size: 1.7rem;
     font-family: "DIN Pro Light";
     margin-bottom: 2rem;
 }
 
-.contact-us form input[type='text'] {
-    border: 1px solid #e1e1e1;
+.contact-us__input {
+    border: 1px solid rgba(35,35,36,0.40);
     text-align: center;
-    padding: 1.8rem 1rem;
+    padding: 2rem 1rem;
     border-radius: 8px;
     width: 100%;
     margin: 0 1rem 1.4rem 1rem;
 }
 
-.contact-us form input[type='text']:focus {
+.contact-us__input:focus {
     border-color: #f10;
     outline: none;
     box-shadow: 0px 0px 3px #f10;
     flex-basis: 100%;
 }
 
-.contact-us form input[type='checkbox'],
-.contact-us label {
+.contact-us__input--text::placeholder,
+.contact-us__input--password::placeholder {
+    font-size: 1.6rem;
+}
+
+.contact-us__checkbox,
+.contact-us__label {
     font-size: 9px;
 }
 
-.contact-us .button {
+.contact-us__cta {
     width: 100%;
     padding: 2rem 2.2rem 2rem;
     margin-bottom: 2rem;
 }
 
-.contact-us h2 {
-    font-size: 4.8rem;
+.contact-us__heading {
     margin-bottom: 3.8rem;
 }
 
-.contact-us .text-content p{
+.contact-us__text{
     font-size: 2.9rem;
     font-family: 'DIN Pro Light';
+    max-width: 49.5rem;
 }
 
-
-
-.contact-us form {
-    background-color: #fff;
-    border-radius: 8px;
+.footer {
+    padding-top: 7.5rem;
 }
 
-.footer > .container {
+.footer__inner {
     display: flex;
     flex-flow: row nowrap;
     padding: 7.5rem 0 0;
     justify-content: end;
 }
 
-.icon-container {
+.footer__icon-container {
     /* flex-grow: 2; */
     margin-right: auto;
 }
 
-.footer .text-content {
+.footer__info {
     text-align: right;
 }
 
-.footer .text-content h2 {
-    white-space: nowrap;
+.footer__info-section--socials > a{
+    display: inline-block;
+    vertical-align: top;
 }
 
-.footer .text-content a {
-    color: #000000;
+.footer__link {
     font-size: 2.4rem;
-    font-family: "DIN Pro Medium";
+    color: #000000;
+    font-family: "Din Pro Medium";
+    display: inline-block;
+}
+
+.footer__text--address {
+    color: #000000;
+    font-size: 1.6rem;
+    font-family: "DIN Prom";
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .footer .copyright {
     flex-basis: 100%;
 }
 
-.footer .map-container {
-    margin-left: 2rem;
+.footer__map-container {
+    margin-left: 3.5rem;
 }
 
-.footer .address {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+.footer__info-section {
+    margin-bottom: 2.5rem;
 }
 
-.copyright {
+.footer__copyright {
     padding: 7.4rem 0 1rem;
     font-size: 1.7rem;
     font-family: "DIN Pro Light";
+    flex-basis: 100%;
 }
 
-.copyright p {
-    font-size: 1.7rem;
+.footer__copyright p {
+    font-size: 1.3rem;
     font-family: "DIN Pro Light";
 
 }
@@ -1009,10 +1033,6 @@ ymaps {
 .input:focus {
     outline: none;
 }
-
-
-
-
 
 @media (max-width: 1200px) {
     .container {
@@ -1089,10 +1109,6 @@ ymaps {
         margin-top: -1rem;
     }
 
-    .jumbotron__text--content p {
-        /* margin-bottom: -20px; */
-    }
-
     .card-container {
         padding: 8.5rem 0 0;
     }
@@ -1144,11 +1160,15 @@ ymaps {
 
     .looking-for {
         text-align: center;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
     }
 
-    .looking-for p {
+    .looking-for__inner {
+        flex-flow: column nowrap;
+    }
+
+    .looking-for__text {
         font-size: 2.1rem;
         margin-right: 0;
         text-align: center;
@@ -1157,11 +1177,15 @@ ymaps {
         padding-right: 3rem;
     }
 
-    .looking-for h2 {
+    .looking-for__heading {
         font-size: 3.7rem;
     }
 
-    .looking-for img {
+    .looking-for__image-container {
+        flex-wrap: wrap;
+    }    
+
+    .looking-for__img {
         width: 40rem;
         height: 19rem;
         flex-basis: unset;
@@ -1169,20 +1193,22 @@ ymaps {
         margin: auto;
     }
 
-    .looking-for__image__container p{
+    .looking-for__image-container p{
         margin-bottom: 9rem;
     }
 
-    .looking-for__image__container {
+    .looking-for__image-container {
         margin-bottom: 4rem;
     }
 
-    .looking-for__input__wrapper {
-        flex-flow: column;
+    .looking-for__input-wrapper {
+        display: flex;
+        flex-flow: row;
         align-items: center;
+        justify-content: center;
     }
 
-    .looking-for .button {
+    .looking-for__cta {
         padding-top: 1.8rem;
         padding-bottom: 1.7rem;
     }
@@ -1228,36 +1254,53 @@ ymaps {
         text-align: center;
     }
 
-    .showroom h2 {
-        font-size: 4.2rem;
+    .showroom__inner {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
     }
 
-    .showroom > .container > div {
-        flex-basis: unset;
+    .showroom__heading {
+        font-size: 4.3rem;
     }
 
-    .showroom h2 {
-        order: -2;
+    .showroom__text-content {
+        order: 2;
+        max-width: 51rem;
+        padding: unset;
     }
 
-    .showroom .img-content {
-        order: -1;
+    .showroom__img-content {
         margin-bottom: 2rem;
-
     }
 
-    .showroom .address {
+    .showroom__address {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: left;
     }
 
-    .showroom .text-content p {
-        padding:0 4rem;
+    .showroom__img--large {
+        width: 45.2rem;
+        height: 36rem;
     }
 
-    .showroom .address p {
-        padding: 0;
+    .showroom__thumbs {
+        margin-left: 1rem;
+    }
+
+    .showroom__img--thumbs {
+        width: 12.9rem;
+        height: 9.7rem;
+    }
+
+    .showroom__text {
+        font-size: 2.4rem;
+    }
+
+    .showroom__text--small {
+        font-size: 1.9rem;
     }
 
     .manifacturer .container {
@@ -1309,12 +1352,12 @@ ymaps {
         max-width: 550px;
     }
 
-    .contact-us form {
+    .contact-us__form {
         width: 36rem;
         max-width: unset;
     }
     
-    .contact-us form .button {
+    .contact-us__cta {
         width: 100%;
         padding-top: 1.6rem;
         padding-bottom: 1.6rem;
@@ -1587,6 +1630,15 @@ ymaps {
 
     .heading--gallery {
         padding: unset;
+        font-size: 2.4rem;
+    }
+
+    .heading--gallery span {
+        font-size: 1.6rem;
+    }
+
+    .gallery__header {
+        margin-bottom: 0;
     }
 
     .gallery__list {
@@ -1632,9 +1684,10 @@ ymaps {
 
     .gallery__footer {
         flex-direction: column;
+        padding-top: 0;
     }
 
-    .gallery__footer p{
+    .gallery__footer p {
         font-size: 1.3rem;
         flex-basis: auto;
         padding: 0 1.6rem;
@@ -1650,23 +1703,24 @@ ymaps {
         padding: 5rem 0 5rem;
     }
 
-    .looking-for h2 {
+    .looking-for__heading {
         font-size: 2rem;
     }
 
-    .looking-for__image__container p{
+    .looking-for__text {
         font-size: 1.5rem;
         padding: 0;
     }
 
-    .looking-for__image__container img {
+    .looking-for__img {
         width: 25rem;
         height: 12rem;
     }
 
-    .looking-for .button {
-        padding-top: 1.8rem;
-        padding-bottom: 1.7rem;
+    .looking-for__cta {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        padding: 1.6rem 2rem;
     }
     
     .your-choice__text h2{
@@ -1722,26 +1776,26 @@ ymaps {
         padding: 4rem 0 4rem;
     }
 
-    .showroom h2 {
+    .showroom__heading {
         font-size: 2.1rem;
     }
 
-    .showroom .img-content > a img {
+    .showroom__img--large {
         width: 22rem;
         height: 18rem;
     }
 
-    .showroom .img-content .thumbs img {
+    .showroom__img--thumbs {
         width: 6.1rem;
         height: 4.2rem;
     }    
 
-    .showroom .text-content p {
+    .showroom__text {
         font-size: 1.5rem;
         padding: 0;
     }
 
-    .showroom .address p {
+    .showroom__text--small {
         font-size: 1.3rem;
     }
 
@@ -1793,26 +1847,30 @@ ymaps {
         padding-top: 2rem;
     }
 
-    .contact-us h2 {
+    .contact-us__text-content {
+        margin-bottom: 2rem;
+    }
+
+    .contact-us__heading {
         font-size: 2.4rem;
         margin-bottom: 1rem;
     }
 
-    .contact-us .text-content p {
+    .contact-us__text {
         font-size: 1.6rem;
         max-width: 26rem;
     }    
 
-    .contact-us form {
+    .contact-us__form {
         padding: 2rem;
-        max-width: 29rem;
+        max-width: 27.5rem;
     }
 
     .footer {
         text-align: center;
     }
 
-    .footer .container{
+    .footer__inner{
         flex-flow: column;
         align-items: center;
         justify-content: center;

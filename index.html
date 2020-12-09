@@ -299,23 +299,23 @@
         </div>
     </div>
     <div class="looking-for text-white" data-parallax="scroll" data-image-src="./img/bg-2.jpg">
-        <div class="container">
-            <h2>Не нашли понравившуюся модель кровати в нашем каталоге?</h2>
-        </div>
-        <div class="container looking-for__image__container">
-            <p class="md-col-1">Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
-            <img class="md-col-1" src="img/bed-icon.png" alt="">
-        </div>
-        <div class="container looking-for__input__wrapper">
-            <div class="input-container blink">
-                <input type="button" class="button button-attention" value="Отправить макет или фото">
+        <div class="looking-for__inner container">
+            <h2 class="heading heading--large looking-for__heading">Не нашли понравившуюся модель <br> кровати в нашем каталоге?</h2>
+            <div class="looking-for__image-container">
+                <p class="col-2 md-col-1 looking-for__text">Нечего страшного, мы изготовим для вас кровать по вашему макету или просто фото.</p>
+                <img class="col-2 md-col-1 looking-for__img" src="img/bed-icon.png" alt="">
+            </div>
+            <div class="looking-for__input-wrapper">
+                <div class="input-container blink">
+                    <input type="button" class="button button--attention looking-for__cta" value="Отправить макет или фото">
+                </div>
             </div>
         </div>
     </div>
     <div class="your-choice">
         <div class="container">
             <div class="your-choice__text col-4">                
-                <h2>Вы можете выбрать</h2>
+                <h2 class="heading heading--larger">Вы можете выбрать</h2>
                 <p>любой вариант комплектации, материала и обивки кровати</p>
             </div>
             <ul class="card-container">
@@ -345,10 +345,12 @@
     <div   data-parallax="scroll" data-image-src="./img/bg-3.jpg">
         <div class="matras">
             <div class="container">
-                <img class="hidden-lg" src="img/matras.png" alt="matras">
+                <div class="matras__image-container js-move" data-moveto="matras__image-container-2" data-screen="1200">
+                    <img class="" src="img/matras.png" alt="matras">
+                </div>
                 <div class="matras__text-content">
-                    <h2>Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
-                    <img class="lg-hidden" src="img/matras.png" alt="matras">                
+                    <h2 class="heading heading--large">Большой выбор матрасов по высоте  и жесткости со скидкой 10%</h2>
+                    <div id="matras__image-container-2"></div>
                     <p>
                         Выбрали кровать? Теперь предстоит определиться с выбором матраса, ведь от него будет зависеть качество вашего сна!
                     </p>
@@ -360,22 +362,28 @@
         </div>
     </div>
     <div class="showroom">
-        <div class="container">
-            <h2 class="lg-hidden">Мы ждем вас в нашем Шоуруме</h2>
-            <div class="text-content">
-                <h2 class="hidden-lg">Мы ждем вас в нашем Шоуруме</h2>
-                <p>Где вы сможете в живую увидеть наши модели кроватей, пообщаться с консультантами и выбрать подходящую для вас модель!</p>
-                <div class="address">
-                    <img src="img/map.png" alt="" class="map-icon">
-                    <p>Москва, ул. Тимирязевская, д.2/3 <br>
+        <div class="container showroom__inner">
+            <div id='showroom__heading2' class="hidden--lg">
+
+            </div>
+            <div class="showroom__text-content col-2 col-md-1">
+                <div>
+                    <h2 class="heading heading--large js-move showroom__heading" data-moveto="showroom__heading2" data-screen="1200">Мы ждем вас в нашем Шоуруме</h2>
+                </div>
+                <p class="showroom__text">Где вы сможете в живую увидеть наши модели кроватей, пообщаться с консультантами и выбрать подходящую для вас модель!</p>
+                <div class="showroom__address">
+                    <img class="showroom__address-icon" src="img/map.png" alt="" class="map-icon">
+                    <p class="showroom__text showroom__text--small">Москва, ул. Тимирязевская, д.2/3 <br>
                         (ТЦ "Парк 11", 3 этаж)</p>
                 </div>
             </div>
-            <div class="img-content">
-                <a href="#"><img src="img/showroom4.jpg" alt=""></a>
-                <div class="thumbs">
-                    <a href="#"><img src="img/showroom4.jpg" alt=""></a>
-                    <a href="#"><img src="img/showroom5.jpg" alt=""></a>
+            <div class="showroom__img-content col-2 col-md-1">
+                <a class="showroom__img-link showroom__img-link--large js-showroom-modaal" href="img/showroom4.jpg">
+                    <img src="img/showroom4.jpg" alt="" class="showroom__img showroom__img--large" data-group="showroom">
+                </a>
+                <div class="showroom__thumbs">
+                    <a href="img/showroom4.jpg" data-group="showroom"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom4.jpg" alt=""></a>
+                    <a href="img/showroom5.jpg" data-group="showroom"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -383,7 +391,6 @@
     <div class="manifacturer text-white">
         <div class="container">
             <div class="card__img">
-
                 <img src="img/cog.png" alt="">
             </div>
             <div class="text-content">
@@ -394,15 +401,17 @@
     </div>
     <div class="designer">
         <div class="container">
-            <h2 class="lg-hidden designer__header">Вы дизайнер?</h2>
+            <div id="designer__header2">
+
+            </div>
             <div class="col-2 md-col-2 sm-col-1">
                 <img src="img/dizayn.png" alt="bed-design">
             </div>
             <div class="text-content col-2 md-col-2 sm-col-1">
-                <h2 class="hidden-lg">Вы дизайнер?</h2>
+                <h2 class="heading heading--large js-move"  data-moveto="designer__header2" data-screen="760">Вы дизайнер?</h2>
                 <p>В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
                 <div class="text-content__footer">
-                    <img src="img/small-bed.png" alt="">
+                    <img class="designer__icon" src="img/small-bed.png" alt="">
                     <p>Мы предоставим вам 3D модели всех наших кроватей
                     </p>
                 </div>
@@ -410,24 +419,24 @@
         </div>
     </div>
     <div class="contact-us"  data-parallax="scroll" data-image-src="./img/bg-7.jpg">
-        <div class="container">
-            <div class="text-content">
-                <h2>Свяжитесь с нами!</h2>
-                <p>
+        <div class="container contact-us__inner">
+            <div class="contact-us__text-content">
+                <h2 class="heading heading--large contact-us__heading">Свяжитесь с нами!</h2>
+                <p class="contact-us__text">
                     Наши менеджеры подробно проконсультируют вас по выбору кровати и просчитают любое изделие на заказ в течение 15 минут
                 </p>
             </div>
-            <div class="form-container">
-                <form action="">
-                    <h2>Введите свои данные и наш
-                        специалист свяжется с вами</h2>
-                    <input type="text" placeholder="Введите свое имя">
-                    <input type="text" placeholder="Введите свой телефон">
+            <div class="contact-us__form-container">
+                <form action="" class="contact-us__form">
+                    <h3 class="contact-us__heading--form">Введите свои данные и наш
+                        специалист свяжется с вами</h3>
+                    <input class="contact-us__input contact-us__input--text" type="text" placeholder="Введите свое имя">
+                    <input class="contact-us__input contact-us__input--password" type="text" placeholder="Введите свой телефон">
                     <div class="blink">
-                        <input type="button" value="Получить консультацию" class="button button-attention blink">
+                        <input type="button" class="button button--attention contact-us__cta" value="Получить консультацию" class="button button-attention blink">
                     </div>
-                    <label for="check">                        
-                        <input type="checkbox" name="check" id="check">
+                    <label for="check" class="contact-us__label">   
+                        <input type="checkbox" name="check" id="check" clas="contact-us__checkbox">
                         Нажимая на кнопку "Получить консультацию", я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности                        
                     </label>
                 </form>
@@ -435,43 +444,40 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
-            <div class="icon-container">
+        <div class="container footer__inner">
+            <div class="footer__icon-container">
                 <a href="#" class="icon">
                     <img src="img/logo.png" alt="">
                 </a>
             </div>
-            <div class="text-content">
-                <h2>
-                    <a class="animated-underline" href="#">+7 (495) 142-93-80</a>
-                </h2>
-                <p class="d-ib">
-                    <a class="animated-underline" href="#">+7 (495) 142-93-80</a>
-                    <a href="#" class="icon">
+            <div class="footer__info">
+                <div class="footer__info-section">
+                    <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                </div>
+                <div class="footer__info-section footer__info-section--socials">
+                    <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
+                    <a href="#" class="icon footer__link--icon">
                         <img src="img/viber.jpg" alt="viber">
                     </a>
-                    <a href="" class="icon">
+                    <a href="" class="icon footer__link--icon">
                         <img src="img/whatsapp.jpg" alt="whatsapp">
                     </a>
-                </p>
-                <p class="address">
-                    г. Москва, ул. Тимирязевская, д.2/3 <br> (ТЦ "Парк 11", 3 этаж)                
-                </p>
-                <p>
-                    <a href="#"><img src="img/insta1.png" alt="instagram"></a>
-                </p>
+                    <p class="address footer__text footer__text--address">
+                        г. Москва, ул. Тимирязевская, д.2/3 <br> (ТЦ "Парк 11", 3 этаж)                
+                    </p>
+                    <a href="#" class="footer__link footer__link--icon footer__link--block"><img src="img/insta1.png" alt="instagram"></a>
+                </div>
             </div>
-            <div class="map-container">
+            <div class="footer__map-container">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
             </div>
         </div>
-
-    </footer>
-    <div class="copyright">
-        <div class="container">
-            <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
+        <div class="footer__copyright">
+            <div class="container">
+                <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
+            </div>
         </div>
-    </div>
+    </footer>
     <div class="menu menu--fixed">
         <nav class="nav">
             <a href="#" class="brand-logo"><img src="img/logo.png" alt="brand logo"></a>
