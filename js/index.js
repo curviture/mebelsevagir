@@ -3,12 +3,26 @@ $('#call-from-navbar').modaal({
     content_source: '#js-call-navbar'
 });
 
+$("#js-looking-for__cta").modaal({
+    content_source: '#js-call-looking-for'
+});
+
 $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });
 
 $('.js-showroom-modaal').modaal({
     type: 'image'
+});
+
+$('.main').parallax()
+
+$('#js-file-input').on('input',function(event) {
+    if(event.target.files[0].name) {
+        $('#js-file-input-fake').text(event.target.files[0].name)
+    } else {
+        $('#js-file-input-fake').text("Прикрепить макет")        
+    }
 });
 
 //moving items in case of small screen

@@ -132,6 +132,92 @@ body {
     border: 1px solid #000;
 }
 
+.form {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding: 3rem 4.5rem 4rem;
+    width: 100%;
+}
+
+.input__wrapper {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    font-size: 1.7rem;
+    background-color: transparent;
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border: 1px solid #A9A9A9;
+    text-align: center;
+}
+
+.input:focus {
+    border-color: #EE1919;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075), 0px 0px 8px rgba(238,25,25,0.60);
+    outline: 0;
+}
+
+.input--file {
+    opacity: 0;
+    width: 100%;
+}
+
+.input-label--file {
+    position: relative;
+    border: 1px solid #A9A9A9;
+    border-radius: 1rem;
+    width: 100%;
+    display: block;
+    padding-right: 12rem;    
+}
+
+.input-file-custom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-right: 12rem;
+    overflow: hidden;
+    padding-left: 3rem;
+    line-height: 6rem;
+    text-overflow: ellipsis;    
+    vertical-align: middle;
+}
+
+/* .input-file-custom:before {
+    content: 'Прикрепить макет';
+    border: 1px solid #A9A9A9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 1rem 0 0 1rem;
+} */
+
+.input-file-custom:after {
+    content: 'Прикрепить';
+    border: 1px solid #A9A9A9;
+    background-color: #000;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem;
+}
+
+.input-file--fake {
+    text-align: left;
+
+}
+
 /*typography*/
 
 .heading {
@@ -198,17 +284,13 @@ body {
     right: 0;
     color: #ffffff;
     font-size: 1.7rem;
-    z-index: 3;
+    z-index: 6;
 }
 
 .header__inner {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
-}
-
-.menu--fixed {
-    display: none!important;
 }
 
 .menu {
@@ -236,6 +318,15 @@ body {
     flex-grow: 2;
     margin-left: 4.8rem;
     margin-top: .9rem;
+}
+
+.menu--light-bg {
+    color: #000000;
+}
+
+.menu--light-bg .menu__link,
+.header--light-bg .header__link {
+    color: #000000;
 }
 
 .header__info {
@@ -270,14 +361,75 @@ body {
     margin-right: 2.8rem;
 }
 
+.header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: #000000;
+    z-index: 1;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.header--fixed .logo__icon {
+    width: 76px;
+    height: 40px;
+}
+
+.header--fixed .menu {
+    margin-top: 0;
+    margin-left: 2.4rem;
+}
+
+.header--fixed .header__text {
+    margin-top: 0;
+}
+
+.header--fixed .header__contacts-vert {
+    margin-right: 1rem;
+}
+
+.header--fixed .header__link--small {
+    display: inline-block;
+}
+
+.header--fixed .header__link--large {
+    margin-bottom: 0;
+}
+
+.header--fixed .header__link--small {
+    font-size: 1.5rem;
+    text-align: right;
+    font-family: "Din Pro";
+    margin-bottom: 0;
+}
+
+.header--fixed .header__contacts {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.header--fixed header__link--small {
+    font-size: 1.5rem;
+}
+
+.header--fixed .header__contacts-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
 .main {
-    /* background: url('../img/bg-1.jpg') 50% 0; */
+    background: url('../img/bg-1.jpg') 50% 0;
     background-size: cover;
     height: 97.5vh;
     position: relative;
     padding-top: 150px;
     padding-bottom: 6.5rem;
-    z-index: 2;
+    z-index: 5;
 }
 
 .main__heading span {
@@ -304,7 +456,7 @@ body {
 }
 
 .main__content--bordered {
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255, 0.47);
     border-radius: 1rem;
     padding: 4rem 5rem;
     display: flex;
@@ -585,7 +737,7 @@ body {
 
 .looking-for {
     padding: 9.2rem 0 10rem;
-    /* background: url(../img/bg-2.jpg); */
+    background: url(../img/bg-2.jpg);
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
@@ -660,8 +812,7 @@ body {
 }
 
 .matras {
-    /* background-image: url(../img/bg-3.jpg); */
-    background-attachment: fixed;
+    background-image: url(../img/bg-3.jpg);
     padding: 10rem 0 9rem;
     color: #ffffff;
 }
@@ -830,7 +981,7 @@ body {
 }
 
 .contact-us {
-    /* background-image: url(../img/bg-7.jpg); */
+    background-image: url(../img/bg-7.jpg);
     background-attachment: fixed;
     padding: 7rem 0 6.5rem;
     color: #ffffff;
@@ -1011,27 +1162,12 @@ ymaps {
 }
 
 .form__input-wrapper {
-    padding: 0 6rem;
     margin-bottom: 1.3rem;
 }
 
 .form__checkbox-text {
     font-size: 1.1rem;
     text-align: left;
-}
-
-.input {
-    width: 100%;
-    border-radius: 1rem;
-    font-size: 1.6rem;
-    padding: 2rem;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #333;
-}
-
-.input:focus {
-    outline: none;
 }
 
 @media (max-width: 1200px) {
@@ -1090,6 +1226,10 @@ ymaps {
 
     .header__text {
         font-size: 1.7rem;
+    }
+
+    .header--fixed {
+        display: none;
     }
 
     .main__inner {
