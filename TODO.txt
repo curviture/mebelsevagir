@@ -6,5 +6,3 @@
 //TODO: fix allignment on checkbox
 //TODO: make separate input, form css (generalized)
 //TODO: fix all forms
-//TODO: fix parallax effec ton main
-//TODO: add parallax to remainng blocks

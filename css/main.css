@@ -22,10 +22,6 @@ html {
     font-size: 62.5%;
 }
 
-.bg-fixed {
-    background-attachment: fixed;
-}
-
 body {
     font-family: "DIN Pro";
     font-size: 2.4rem;
@@ -442,7 +438,8 @@ body {
 .main {
     background: url('../img/bg-1.jpg') 50% 0;
     background-size: cover;
-    height: 97.5vh;
+    background-attachment: fixed;
+    height: 77.5vh;
     position: relative;
     padding-top: 150px;
     padding-bottom: 6.5rem;
@@ -754,6 +751,7 @@ body {
 .looking-for {
     padding: 9.2rem 0 10rem;
     background: url(../img/bg-2.jpg);
+
     background-attachment: fixed;
     justify-content: center;
     align-items: center;
@@ -830,6 +828,7 @@ body {
 
 .matras {
     background-image: url(../img/bg-3.jpg);
+    background-attachment: fixed;
     padding: 10rem 0 9rem;
     color: #ffffff;
 }

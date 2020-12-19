@@ -19,7 +19,11 @@ $('.js-showroom-modaal').modaal({
     type: 'image'
 });
 
-$('.main').parallax()
+// $('.main').parallax();
+// $('.looking-for').parallax();
+// $('.matras').parralax()
+
+$('.js-parallax').parallax()
 
 $('#js-file-input').on('input',function(event) {
     if(event.target.files[0].name) {
