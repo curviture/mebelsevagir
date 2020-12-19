@@ -51,13 +51,12 @@
                     (ТЦ "Парк 11", 3 этаж)
                 </p>
                 <p class="header__text">
-                    <a  class="header__link header__link--large animated-underline" href="http://">+7 (495) 142-93-80</a>
+                    <a  class="header__link header__link--large animated-underline" href="tel:+74951429380">+7 (495) 142-93-80</a>
                     <input id="call-from-navbar" class="button button--tiny button--header" type="button" value="Заказать звонок" data-toggle="modal" data-target="#js-call-navbar">
                 </p>
             </div>
         </div>
     </div>
-
     </div>    
     <div class="main text-white" data-parallax="scroll" data-image-src="./img/bg-1.jpg">
         <div class="container main__inner">
@@ -79,7 +78,7 @@
                     <img src="img/bed-icon-small.png" alt="">
                 </div>
                 <div class="main__input--container blink">
-                    <input type="button" class="main__cat button button--attention button" value="Подобрать и рассчитать" />
+                    <input type="button" class="main__cta button button--attention button" id="js-main__cta" value="Подобрать и рассчитать" />
                 </div>
             </div>
             <a href="#gallery" class="button--slidedown">&darr;</a>
@@ -139,7 +138,7 @@
                             </div>
                             <div class="gallery__item-thumbs">
                                 <a href="img/1-(1).jpg" data-group="gallery-1"><img src="img/1-(1).jpg" alt=""></a>
-                                <a href="img/1-(1).jpg" data-group="gallery-1"><img src="img/1-(2).jpg" alt=""></a>
+                                <a href="img/1-(2).jpg" data-group="gallery-1"><img src="img/1-(2).jpg" alt=""></a>
                             </div>
                         </div>
                         <div class="gallery__item-ordering">
@@ -385,8 +384,8 @@
                     <img src="img/showroom4.jpg" alt="" class="showroom__img showroom__img--large" data-group="showroom">
                 </a>
                 <div class="showroom__thumbs">
-                    <a href="img/showroom4.jpg" data-group="showroom"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom4.jpg" alt=""></a>
-                    <a href="img/showroom5.jpg" data-group="showroom"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
+                    <a href="img/showroom4.jpg" data-group="showroom" class="js-showroom-modaal"><img class="showroom__img--thumbs" src="img/showroom4.jpg" alt=""></a>
+                    <a href="img/showroom5.jpg" data-group="showroom" class="js-showroom-modaal"><img class="showroom__img--thumbs js-showroom-modaal" src="img/showroom5.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -454,7 +453,7 @@
                 </a>
             </div>
             <div class="footer__info">
-                <div class="footer__info-section">
+                <div class="footer__info-section footer__info-section--brand">
                     <a class="animated-underline footer__link" href="#">+7 (495) 142-93-80</a>
                 </div>
                 <div class="footer__info-section footer__info-section--socials">
@@ -475,10 +474,8 @@
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abfd18d127c1ae4253d27aaa7cdae43f5a4446af54a0dee7189da9cedd8f25937&amp;width=320&amp;height=240&amp;lang=en_FR&amp;scroll=true"></script>                
             </div>
         </div>
-        <div class="footer__copyright">
-            <div class="container">
-                <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
-            </div>
+        <div class="footer__copyright container">
+            <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
         </div>
     </footer>
     <div class='header header--fixed header--light-bg'>
@@ -517,7 +514,7 @@
                 </p>
                 <div class="header__text header__contacts">
                     <div class="header__contacts-vert">
-                        <a  class="header__link header__link--large animated-underline" href="http://">+7 (495) 142-93-80</a>
+                        <a  class="header__link header__link--large animated-underline" href="tel:+74951429380">+7 (495) 142-93-80</a>
                         <a id="call-from-navbar-fixed" class="header__link header__link--small animated-underline">Заказать звонок</a>
                     </div>
                     <div class="header__contacts__social">
@@ -528,6 +525,9 @@
                 </div>
             </div>
         </div>    
+    </div>    
+        
+        
     <!-- Modals -->
     <div class="modal" tabindex="-1" id="js-call-navbar"  style="display:none;">
         <div class="modal__content">
@@ -590,7 +590,17 @@
                 </form>
             </div>
         </div>
-    </div>        
+    </div>
+    <div class="modal" tabindex="-1" id="js-call-looking-for"  style="display:none;">
+        <div class="modal__content">
+            <div class="modal__header">
+
+            </div>
+            <div class="modal__body">
+                
+            </div>
+        </div>
+    </div>            
     <script src='js/index.js'></script>    
 </body>
 </html>

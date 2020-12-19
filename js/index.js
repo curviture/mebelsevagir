@@ -7,6 +7,10 @@ $("#js-looking-for__cta").modaal({
     content_source: '#js-call-looking-for'
 });
 
+$("#js-main__cta").modaal({
+    content_source: '#js-call-looking-for'
+});
+
 $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });

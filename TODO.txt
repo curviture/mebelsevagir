@@ -1,13 +1,10 @@
 //TODO: add fixed menu on large and middle screens
 //TODO: fix border on gallery items
-//TODO: fix slutering on paralax.js
 //TODO: fix mismatches of padding on all blocks
 //TODO: fix mismatches of fonts on all blocks
-//TODO: add custom file input
 //TODO: add modals for gallery
-//TODO: fix font on modal when pressing order call on menu
-//TODO: fix border on modal when pressing order call on menu
 //TODO: fix allignment on checkbox
 //TODO: make separate input, form css (generalized)
-//TODO: fix backgound color when hovering and clicking over button
 //TODO: fix all forms
+//TODO: fix parallax effec ton main
+//TODO: add parallax to remainng blocks
