@@ -11,6 +11,10 @@ $("#js-main__cta").modaal({
     content_source: '#js-call-looking-for'
 });
 
+$(".js-gallery-order").modaal({
+    content_source: "#js-gallery"
+})
+
 $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });

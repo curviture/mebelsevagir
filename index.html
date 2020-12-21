@@ -142,7 +142,7 @@
                         </div>
                     </div>
                     <div class="gallery__item-ordering">
-                        <input type="button" value="lorem" class="button button--transparent button--bordered">
+                        <input type="button" value="apero" class="button button--transparent button--bordered js-gallery-order">
                         <input type="button" value="lorem" class="button button--attention">
                     </div>
                 </li>
@@ -320,7 +320,7 @@
                 <h2 class="heading heading--larger">Вы можете выбрать</h2>
                 <p>любой вариант комплектации, материала и обивки кровати</p>
             </div>
-            <ul class="card-container">
+            <ul class="card-container card-container--your-choice">
                 <li>
                     <img src="img/variant6.jpg" alt="">
                     <p>Варианты ткани<br>
@@ -408,7 +408,7 @@
                 <img src="img/dizayn.png" alt="bed-design">
             </div>
             <div class="text-content col-2 md-col-2 sm-col-1">
-                <h2 class="heading heading--large js-move"  data-moveto="designer__header2" data-screen="760">Вы дизайнер?</h2>
+                <h2 class="heading heading--large js-move designer__heading"  data-moveto="designer__header2" data-screen="760">Вы дизайнер?</h2>
                 <p>В таком случае, у вас есть возможность стать нашим партнёром и получать 10% (вознаграждение) от стоимости кровати за каждого приведённого клиента</p>
                 <div class="text-content__footer">
                     <img class="designer__icon" src="img/small-bed.png" alt="">
@@ -473,7 +473,7 @@
             </div>
         </div>
         <div class="footer__copyright container">
-            <p>Copyright © 2020 made by Gevorg Ghazaryan</p>
+            Copyright © 2020 made by Gevorg Ghazaryan
         </div>
     </footer>
     <div class='header header--fixed header--light-bg'>
@@ -589,13 +589,59 @@
             </div>
         </div>
     </div>
-    <div class="modal" tabindex="-1" id="js-call-looking-for"  style="display:none;">
-        <div class="modal__content">
-            <div class="modal__header">
+    <div class="modal" tabindex="-1" id="js-gallery"  style="display:none;">
+        <div class="modal__content modal__content--large item-details__modal-content">
+            <div class="modal__body item-details">
+                <div class="item-details__main item-details--part">
+                    <h3 class="item-details__heading--small">Кровать</h3>
+                    <h2 class="item-details__heading">София</h2>
+                    <div class="item-details__img-container">
+                        <img src="img/1-(1).jpg" alt="" class="item-details__img">
+                    </div>
+                </div>
 
-            </div>
-            <div class="modal__body">
-                
+                <div class="item-details--part item-details--info">
+                    <p class="item-details__p">
+                        Огромный выбор обивочных материалов: <b>бархат; велюр; велюр люкс; микровелюр; рогожка, жаккард; шенилл; эко кожа высшего сорта; кожа </b> 
+                    </p>
+                    <p class="item-details__p item-details__p--important">
+                        Возможно изготовление кроватей нестандартного размера и вариантов обивки!
+                    </p>
+                    <p class="item-details__p item-details__p--m-0">Дополнительно возможно:</p>
+                    <ul class="list-styled item-details__list">
+                        <li class="item-details__list-item">Усиленное ортопедическое основание</li>
+                        <li class="item-details__list-item">Подъемный механизм с бельевыми ящиками</li>
+                    </ul>
+                </div>
+                <div class="item-details--part item-details--table-part">
+                    <table class="item-details__table">
+                        <thead class="item-details__table-head">
+                            <tr>
+                                <td>Спальное место:</td>
+                                <td>Габариты кровати:</td>                                
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см</td>
+                            <td class="item-details__table-cell">145/215 см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см</td>
+                            <td class="item-details__table-cell">145/215 см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см</td>
+                            <td class="item-details__table-cell">145/215 см</td>
+                        </tr>
+                        <tr>
+                            <td class="item-details__table-cell">120/200 см</td>
+                            <td class="item-details__table-cell">145/215 см</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="item-details-order">
+                    <input type="text" class="button button--attention item-details__cta js-item-details" value="Заказать" >
+                </div>                
             </div>
         </div>
     </div>            
