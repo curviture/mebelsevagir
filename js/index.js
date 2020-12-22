@@ -15,6 +15,12 @@ $(".js-gallery-order").modaal({
     content_source: "#js-gallery"
 })
 
+$('.js-gallery-details').modaal()
+
+
+
+
+
 $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });
@@ -59,6 +65,19 @@ $('#js-file-input').on('input',function(event) {
     let trigger = document.getElementById('js-header-trigger');
     let closer = document.getElementById('js-menu-link-closer');
     let menu = document.getElementById('js-header-menu');
+    trigger.addEventListener('click', function() {
+        menu.classList.toggle('open')
+    })
+    closer.addEventListener('click', function(event) {
+        event.preventDefault()
+        menu.classList.remove('open');
+    })
+}());
+
+(function() {
+    let trigger = document.getElementById('js-header-trigger-fixed');
+    let closer = document.getElementById('js-menu-link-closer');
+    let menu = document.getElementById('js-header-menu-fixed');
     trigger.addEventListener('click', function() {
         menu.classList.toggle('open')
     })

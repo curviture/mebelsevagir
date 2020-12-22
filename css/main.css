@@ -86,7 +86,6 @@ body {
     z-index: 100;
     animation: bubble 3s 3s infinite;
     line-height: 5rem;
-    vertical-align: middle;
 }
 
 .button--slidedown:hover {
@@ -638,10 +637,6 @@ body {
     border-top: none;
 }
 
-.gallery__list .gallery__item:first-child {
-    /* padding-top: 0; */
-}
-
 .gallery__list > .gallery__item:nth-child(3n) {
     border-right: none;
     border-left: none;
@@ -723,9 +718,10 @@ body {
     align-items: stretch;
 }
 
-.gallery__item-ordering input{
+.gallery__item-ordering a{
     flex-basis: 48%;
     padding: 1.4rem 0 1.4rem;
+    text-align: center;
 }
 
 .gallery__footer {
@@ -964,15 +960,6 @@ body {
 
 }
 
-
-.designer > .container {
-
-}
-
-/* .designer > .container > * {
-    flex-basis: 50%;
-} */
-
 .designer__heading {
     margin-bottom: 4.2rem;
     font-size: 4.2rem;
@@ -1013,9 +1000,6 @@ body {
 
 .contact-us__text-content {
     flex-basis: 60%;;
-}
-
-.contact-us__form-container {
 }
 
 .contact-us__form {
@@ -1192,7 +1176,8 @@ ymaps {
 }
 
 .item-details {
-    max-height: 47.5rem;
+    max-height: 55.5rem;
+    position: relative;
 }
 
 .item-details__main {
@@ -1233,6 +1218,21 @@ ymaps {
     color: #ff1100;
 }
 
+.item-details-order {
+    /* position: absolute; */
+    margin-left: auto;
+    align-self: flex-end;
+    bottom: 4.2rem;
+    right: 4rem;
+}
+
+.item-details__cta {
+    text-align: center;
+    display: inline-block;
+    max-width: 16rem;
+
+}
+
 .list-styled {
     list-style-type: disc;
     margin: unset;
@@ -1267,6 +1267,10 @@ ymaps {
         display: unset!important;
     }
 
+    .hidden--sm {
+        display: unset!important;
+    }
+
     .visible--lg {
         display: none!important;
     }
@@ -1288,6 +1292,15 @@ ymaps {
         text-align: center;
     }
 
+    .menu__trigger {
+        display: block;
+        padding: 1rem;
+        cursor: pointer;
+        margin-top: -1rem;
+    }
+
+    
+
     .menu {
         order: 4;
         /* flex-basis: 100%; */
@@ -1304,28 +1317,60 @@ ymaps {
 
     .menu__item:last-child {
         margin-left: 0;
+    }
+    
+    .menu__trigger .line {
+        display: block;
+        height: 5px;
+        width: 2.5rem;
+        background-color: #000000;
+        margin-bottom: .5rem;
+    }
+
+    .header__inner-container--fixed {
+        max-width: 72rem;
+        justify-content: space-between;
     }    
+    
+    .header--fixed .menu {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background-color: rgba(255,255,255,0.9);
+        transform: scaleX(0);
+        transition: all 0.1s;
+        margin-top: 0;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .header--fixed .menu.open {
+        transform: scaleX(1);
+        z-index: 100;
+        padding-bottom: 30vh;          
+    }
+
+    .header--fixed .header__text--small {
+        font-size: 1.6rem;
+        margin-right: 1rem;
+    }
 
     .header__info {
-        margin-left: auto;
+        /* margin-left: auto; */
     }
 
     .header__text {
         font-size: 1.7rem;
     }
 
-    .header--fixed {
-        display: none;
-    }
-
     .main__inner {
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-    }
-
-    .main__content {
-        /* margin-bottom: -10.8rem; */
     }
 
     .main__content--bordered {
@@ -1615,21 +1660,9 @@ ymaps {
         width: 30rem;
     }
 
-    /* .footer__info {
-        order: 1;
-    }
-
-    .footer__info-section {
-        display: flex;
-
-    } */
-    .modal__content--large {
-        /* max-width: 70rem; */
-    }
-
     .item-details {
         max-width: 70rem;        
-        max-height: 47.5rem;
+        max-height: 55.5rem;
     }
 
     .item-details__modal-content .modal-body {
@@ -1645,6 +1678,7 @@ ymaps {
     .button {
         padding: 15px 17px;
     }
+
 
     .button--slidedown {
         width: 3rem;
@@ -1693,18 +1727,15 @@ ymaps {
         padding: 0;
     }
 
+    .header--fixed {
+        display: none;
+    }
+
     .menu__link,
     .header__link {
         color: #000000;
     }
 
-    .menu__trigger .line {
-        display: block;
-        height: 5px;
-        width: 2.5rem;
-        background-color: #000000;
-        margin-bottom: .5rem;
-    }
         
     .menu__trigger {
         display: block;
@@ -2257,6 +2288,17 @@ ymaps {
 
     .item-details__p {
         font-size: 1.2rem;
+    }
+
+    .item-details-order {
+        align-self: center;
+
+        width: 100%;
+    }
+
+    .item-details__cta {
+        display: block;
+        margin: 0  auto;
     }
     
 }
