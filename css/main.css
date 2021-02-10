@@ -148,12 +148,13 @@ body {
     width: 100%;
 }
 
-.input__wrapper {
+.form-input__wrapper {
     width: 100%;
 }
 
 .input {
     width: 100%;
+    display: block;
     font-size: 1.7rem;
     background-color: transparent;
     border-radius: 1rem;
@@ -574,22 +575,23 @@ body {
     margin-bottom: 2.6rem;    
 }
 
-.gallery__header .button {
+.gallery__type-button {
+
     padding: .6rem 2.8rem;
     font-size: 2rem;
     font-family: "DIN Pro Black";
+    font-weight: 900;
     text-transform: capitalize;
     border: transparent;
 }
 
-.button--gallery.active {
+.gallery__type-button.active {
     color: #ff1100;
     border: 1px solid #A5A5A5;
+    cursor: default;
 }
 
-.heading--gallery {
-
-    /* flex-basis: 100%; */
+.gallery__heading {
     padding-left: 3rem;
 }
 
@@ -681,6 +683,7 @@ body {
 .gallery__item-img {
     max-width: 300px;
     height: auto;
+    cursor: pointer;
 }
 
 .gallery__item-img img {
@@ -698,6 +701,10 @@ body {
     justify-content: space-between;
     width: 300px;
     margin-bottom: 1rem;
+}
+
+.gallery__item-thumbs {
+    margin-top: 1rem;
 }
 
 .gallery__item-thumbs a{
@@ -803,7 +810,7 @@ body {
 
 }
 
-.card-container--your-choice {
+.your-choice__card-container {
     padding: 0;
 }
 
@@ -818,7 +825,7 @@ body {
     font-family: "DIN Pro";
 }
 
-.your-choice .card-container li:not(:last-child) {
+.your-choice__card-container li:not(:last-child) {
     margin-right: 2rem;
 }
 
@@ -827,6 +834,10 @@ body {
     background-attachment: fixed;
     padding: 10rem 0 9rem;
     color: #ffffff;
+}
+
+.matras__inner {
+    justify-content: space-around;
 }
 
 .matras h2 {
@@ -838,7 +849,7 @@ body {
     font-family: 'DIN Pro Light'
 }
 
-.matras .text-content p:not(:last-child) {
+.matras__text-content p:not(:last-child) {
     margin-bottom: 3rem;
 }
 
@@ -919,6 +930,7 @@ body {
 
 .manifacturer {
     background-image: url(../img/bg_4.jpg);
+    background-attachment: fixed;
     padding: 4rem 0;
     align-items: center;
 }
@@ -986,6 +998,7 @@ body {
 .contact-us {
     background-image: url(../img/bg-7.jpg);
     background-attachment: fixed;
+    background-position: center center;
     padding: 7rem 0 6.5rem;
     color: #ffffff;
 }
@@ -1327,6 +1340,10 @@ ymaps {
         margin-bottom: .5rem;
     }
 
+    .header__inner {
+        justify-content: space-between;
+    }
+
     .header__inner-container--fixed {
         max-width: 72rem;
         justify-content: space-between;
@@ -1359,13 +1376,38 @@ ymaps {
         margin-right: 1rem;
     }
 
-    .header__info {
-        /* margin-left: auto; */
+    .header--fixed .menu__link {
+        padding: 10px 16px;
+
     }
+
+    .header--fixed .menu__link:hover {
+        background-color: #fff;        
+    }    
 
     .header__text {
         font-size: 1.7rem;
     }
+
+    .menu__item--closer {
+        position: absolute;
+        right: 6rem;
+        top: 0;
+        padding: 2rem;
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .header--fixed .menu__item {
+        margin: unset;
+    }
+
+    .menu__link--closer {
+        width: 2rem;
+        height:2rem;
+        font-size: 4rem;
+    }    
 
     .main__inner {
         flex-flow: row wrap;
@@ -1401,7 +1443,7 @@ ymaps {
         margin-bottom: 2rem;
     }
 
-    .heading--gallery  span {
+    .gallery__heading  span {
         margin-right: 0;
         margin-bottom: 4rem;
     }
@@ -1511,6 +1553,10 @@ ymaps {
     .your-choice img {
         width: 155px;
         height: 155px;
+    }
+
+    .your-choice__card-container {
+        padding-top: 0;
     }
 
     .matras {
@@ -1847,6 +1893,10 @@ ymaps {
         font-size: 4rem;
     }
 
+    .main {
+        min-height: 70rem;
+    }
+
     .main__inner {
         justify-content: center;
         align-items: center;
@@ -1924,19 +1974,26 @@ ymaps {
 
     .gallery {
         padding-bottom: 4rem;
+        padding-top: 0;
     }
 
-    .heading--gallery {
+    .gallery__heading {
         padding: unset;
         font-size: 2.4rem;
+        margin-bottom: 3.5rem;
     }
 
-    .heading--gallery span {
+    .gallery__heading span {
         font-size: 1.6rem;
     }
 
     .gallery__header {
         margin-bottom: 0;
+    }
+
+    .gallery__type-button {
+        font-size: 1.8rem;
+        padding: .8rem 2.2rem;
     }
 
     .gallery__list {
@@ -2022,6 +2079,10 @@ ymaps {
         padding: 0;
     }
 
+    .looking-for__image-container p {
+        margin-bottom: 4rem;
+    }
+
     .looking-for__img {
         width: 25rem;
         height: 12rem;
@@ -2049,6 +2110,11 @@ ymaps {
         margin-bottom: 0;
     }
 
+    .your-choice__card-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .your-choice__text p {
         font-size: 1.7rem;
     }
@@ -2058,16 +2124,20 @@ ymaps {
         width: 12rem;
     }
 
-    .your-choice .card-container p {
+    .your-choice__card-container p {
         font-size: 1.3rem;
     }
 
-    .your-choice .card-container li:not(:last-child) {
+    .your-choice__card-container li:not(:last-child) {
         margin: unset;
         margin-bottom: 2rem;
-    }    
+    }
 
-    .your-choice .card-container li {
+    .your-choice__card-container li:nth-child(odd) {
+        margin-right: 2rem;
+    }
+
+    .your-choice__card-container li {
         margin-bottom: 2rem;
     }
 
@@ -2149,7 +2219,8 @@ ymaps {
 
     .designer {
         text-align: center;
-        padding-top: 3rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .designer__heading {
@@ -2170,7 +2241,8 @@ ymaps {
     }
 
     .contact-us  {
-        padding-top: 2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .contact-us__text-content {
@@ -2180,6 +2252,10 @@ ymaps {
     .contact-us__heading {
         font-size: 2.4rem;
         margin-bottom: 1rem;
+    }
+
+    .contact-us__heading--form  {
+        font-size: 1.5rem;
     }
 
     .contact-us__text {
@@ -2194,6 +2270,7 @@ ymaps {
 
     .footer {
         text-align: center;
+        padding-top: 3.5rem;
     }
 
     .footer__inner{

@@ -1,15 +1,9 @@
-TODO: add fixed menu on large and middle screens
-TODO: fix border on gallery items
-TODO: fix mismatches of padding on all blocks
-TODO: fix mismatches of fonts on all blocks
-TODO: add modals for gallery
 TODO: fix allignment on checkbox
-TODO: make separate input, form css (generalized)
 TODO: fix all forms
-TODO: fix font size of copyright
 TODO: fix contact heading padding issue on middle screens
 TODO: fix height issue and element arrangment in main
-TODO: fix gallery item main picture being clickable
-TODO: fix padding between card container and gallery on small screen
-TODO: fix padding in designer, inside of it on small screen
 TODO: fix slight mismatch between original and made by myself of navbars order call buttn
+TODO: main div: set min height so it will render normal when heigth is not enough to contain div on small screen
+TODO: fix button on main cra, order call looking for modal forms
+TODO: fix item details modal
+TODO: fix backgound not being rendered properly on contact us form on large screen

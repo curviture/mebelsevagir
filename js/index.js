@@ -11,23 +11,33 @@ $("#js-main__cta").modaal({
     content_source: '#js-call-looking-for'
 });
 
-$(".js-gallery-order").modaal({
-    content_source: "#js-gallery"
+$(".js-gallery-order").modaal();
+
+// $("#a").modaal()
+
+$('.js-gallery-details').modaal();
+
+// $(".js-showroom-modaal-trigger").click(function(event) {
+//     event.preventDefault()
+//     $(".js-showroom-modaal:first-child").trigger('click');
+// })
+
+$('.js-showroom-modaal-trigger').on('click',function(event) {
+    event.preventDefault()
+    $(".js-showroom-modaal").eq(0).trigger('click');    
 })
 
-$('.js-gallery-details').modaal()
-
-
-
-
+$('.js-showroom-modaal').modaal({
+    type: 'image'
+});
 
 $('.gallery__item-thumbs a').modaal({
     type: 'image'
 });
 
-$('.js-showroom-modaal').modaal({
-    type: 'image'
-});
+$(".gallery__item-img").on('click',function(event) {
+    $(this).parent().find('.gallery__item-thumbs a').eq(0).trigger('click')
+})
 
 // $('.main').parallax();
 // $('.looking-for').parallax();
@@ -60,6 +70,23 @@ $('#js-file-input').on('input',function(event) {
     }
 }());
 
+
+(function() {
+    let width = screen.availWidth;
+    let headerMenuLink = document.querySelectorAll('.menu--header--fixed .menu__link');
+    console.log('moveto', width)
+    if(width <= 1200) {
+        headerMenuLink.forEach(function(item) {
+            item.classList.remove('animated-underline')
+        })
+    }
+    if(width > 760) {
+        headerMenuLink.forEach(function(item) {
+            item.classList.add('animated-underline')
+        })
+    }
+}());
+
 //closing and opening menu on small screen(max-width < 770px)
 (function() {
     let trigger = document.getElementById('js-header-trigger');
@@ -75,9 +102,9 @@ $('#js-file-input').on('input',function(event) {
 }());
 
 (function() {
-    let trigger = document.getElementById('js-header-trigger-fixed');
-    let closer = document.getElementById('js-menu-link-closer');
-    let menu = document.getElementById('js-header-menu-fixed');
+    let trigger = document.getElementById('js-header-trigger--fixed');
+    let closer = document.getElementById('js-menu-link-closer--fixed');
+    let menu = document.getElementById('js-header-menu--fixed');
     trigger.addEventListener('click', function() {
         menu.classList.toggle('open')
     })
